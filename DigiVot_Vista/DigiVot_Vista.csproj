@@ -97,6 +97,12 @@
     <Compile Include="Vista_Login.Designer.cs">
       <DependentUpon>Vista_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista_MesaDirectiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista_MesaDirectiva.Designer.cs">
+      <DependentUpon>Vista_MesaDirectiva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista_Partidos.cs">
       <SubType>Form</SubType>
     </Compile>
