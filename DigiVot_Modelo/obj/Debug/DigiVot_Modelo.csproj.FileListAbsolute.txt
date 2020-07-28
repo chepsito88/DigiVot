@@ -16,3 +16,9 @@ C:\Projecto\Projecto_Equipo1\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.csprojAssem
 C:\Projecto\Projecto_Equipo1\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.csproj.CoreCompileInputs.cache
 C:\Projecto\Projecto_Equipo1\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.dll
 C:\Projecto\Projecto_Equipo1\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.pdb
+C:\Git_Proyecto_New\DigiVot\DigiVot_Modelo\bin\Debug\DigiVot_Modelo.dll
+C:\Git_Proyecto_New\DigiVot\DigiVot_Modelo\bin\Debug\DigiVot_Modelo.pdb
+C:\Git_Proyecto_New\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.csprojAssemblyReference.cache
+C:\Git_Proyecto_New\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.csproj.CoreCompileInputs.cache
+C:\Git_Proyecto_New\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.dll
+C:\Git_Proyecto_New\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.pdb

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vista_Principal));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnMinimizar = new FontAwesome.Sharp.IconPictureBox();
@@ -48,9 +48,9 @@
             this.btnCandidatos = new Guna.UI2.WinForms.Guna2Button();
             this.btnAltas = new Guna.UI2.WinForms.Guna2Button();
             this.pnlReportes = new System.Windows.Forms.Panel();
-            this.btnLocal = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEstatal = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNacional = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReporteLocal = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReporteEstatal = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReporteNacional = new Guna.UI2.WinForms.Guna2Button();
             this.btnReportes = new Guna.UI2.WinForms.Guna2Button();
             this.pnlAsignaciones = new System.Windows.Forms.Panel();
             this.btbFuncionario_MD = new Guna.UI2.WinForms.Guna2Button();
@@ -410,9 +410,9 @@
             // pnlReportes
             // 
             this.pnlReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(220)))));
-            this.pnlReportes.Controls.Add(this.btnLocal);
-            this.pnlReportes.Controls.Add(this.btnEstatal);
-            this.pnlReportes.Controls.Add(this.btnNacional);
+            this.pnlReportes.Controls.Add(this.btnReporteLocal);
+            this.pnlReportes.Controls.Add(this.btnReporteEstatal);
+            this.pnlReportes.Controls.Add(this.btnReporteNacional);
             this.pnlReportes.Controls.Add(this.btnReportes);
             this.AnimacionMenuLateral.SetDecoration(this.pnlReportes, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnlReportes.Location = new System.Drawing.Point(7, 94);
@@ -422,74 +422,74 @@
             this.pnlReportes.Size = new System.Drawing.Size(173, 40);
             this.pnlReportes.TabIndex = 14;
             // 
-            // btnLocal
+            // btnReporteLocal
             // 
-            this.btnLocal.Animated = true;
-            this.btnLocal.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnLocal.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
-            this.btnLocal.CheckedState.Parent = this.btnLocal;
-            this.btnLocal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLocal.CustomImages.Parent = this.btnLocal;
-            this.AnimacionMenuLateral.SetDecoration(this.btnLocal, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnLocal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btnLocal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLocal.ForeColor = System.Drawing.Color.White;
-            this.btnLocal.HoverState.Parent = this.btnLocal;
-            this.btnLocal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLocal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLocal.Location = new System.Drawing.Point(12, 112);
-            this.btnLocal.Name = "btnLocal";
-            this.btnLocal.ShadowDecoration.Parent = this.btnLocal;
-            this.btnLocal.Size = new System.Drawing.Size(156, 35);
-            this.btnLocal.TabIndex = 9;
-            this.btnLocal.Text = "Locales";
-            this.btnLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteLocal.Animated = true;
+            this.btnReporteLocal.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnReporteLocal.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
+            this.btnReporteLocal.CheckedState.Parent = this.btnReporteLocal;
+            this.btnReporteLocal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporteLocal.CustomImages.Parent = this.btnReporteLocal;
+            this.AnimacionMenuLateral.SetDecoration(this.btnReporteLocal, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnReporteLocal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btnReporteLocal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteLocal.ForeColor = System.Drawing.Color.White;
+            this.btnReporteLocal.HoverState.Parent = this.btnReporteLocal;
+            this.btnReporteLocal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteLocal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnReporteLocal.Location = new System.Drawing.Point(12, 112);
+            this.btnReporteLocal.Name = "btnReporteLocal";
+            this.btnReporteLocal.ShadowDecoration.Parent = this.btnReporteLocal;
+            this.btnReporteLocal.Size = new System.Drawing.Size(156, 35);
+            this.btnReporteLocal.TabIndex = 9;
+            this.btnReporteLocal.Text = "Locales";
+            this.btnReporteLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnEstatal
+            // btnReporteEstatal
             // 
-            this.btnEstatal.Animated = true;
-            this.btnEstatal.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnEstatal.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
-            this.btnEstatal.CheckedState.Parent = this.btnEstatal;
-            this.btnEstatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEstatal.CustomImages.Parent = this.btnEstatal;
-            this.AnimacionMenuLateral.SetDecoration(this.btnEstatal, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnEstatal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btnEstatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstatal.ForeColor = System.Drawing.Color.White;
-            this.btnEstatal.HoverState.Parent = this.btnEstatal;
-            this.btnEstatal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEstatal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEstatal.Location = new System.Drawing.Point(12, 76);
-            this.btnEstatal.Name = "btnEstatal";
-            this.btnEstatal.ShadowDecoration.Parent = this.btnEstatal;
-            this.btnEstatal.Size = new System.Drawing.Size(156, 35);
-            this.btnEstatal.TabIndex = 8;
-            this.btnEstatal.Text = "Estatales";
-            this.btnEstatal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteEstatal.Animated = true;
+            this.btnReporteEstatal.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnReporteEstatal.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
+            this.btnReporteEstatal.CheckedState.Parent = this.btnReporteEstatal;
+            this.btnReporteEstatal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporteEstatal.CustomImages.Parent = this.btnReporteEstatal;
+            this.AnimacionMenuLateral.SetDecoration(this.btnReporteEstatal, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnReporteEstatal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btnReporteEstatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteEstatal.ForeColor = System.Drawing.Color.White;
+            this.btnReporteEstatal.HoverState.Parent = this.btnReporteEstatal;
+            this.btnReporteEstatal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteEstatal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnReporteEstatal.Location = new System.Drawing.Point(12, 76);
+            this.btnReporteEstatal.Name = "btnReporteEstatal";
+            this.btnReporteEstatal.ShadowDecoration.Parent = this.btnReporteEstatal;
+            this.btnReporteEstatal.Size = new System.Drawing.Size(156, 35);
+            this.btnReporteEstatal.TabIndex = 8;
+            this.btnReporteEstatal.Text = "Estatales";
+            this.btnReporteEstatal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnNacional
+            // btnReporteNacional
             // 
-            this.btnNacional.Animated = true;
-            this.btnNacional.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnNacional.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
-            this.btnNacional.CheckedState.Parent = this.btnNacional;
-            this.btnNacional.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNacional.CustomImages.Parent = this.btnNacional;
-            this.AnimacionMenuLateral.SetDecoration(this.btnNacional, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnNacional.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btnNacional.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnNacional.ForeColor = System.Drawing.Color.White;
-            this.btnNacional.HoverState.Parent = this.btnNacional;
-            this.btnNacional.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNacional.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnNacional.Location = new System.Drawing.Point(12, 40);
-            this.btnNacional.Name = "btnNacional";
-            this.btnNacional.ShadowDecoration.Parent = this.btnNacional;
-            this.btnNacional.Size = new System.Drawing.Size(156, 35);
-            this.btnNacional.TabIndex = 7;
-            this.btnNacional.Text = "Nacionales";
-            this.btnNacional.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteNacional.Animated = true;
+            this.btnReporteNacional.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnReporteNacional.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
+            this.btnReporteNacional.CheckedState.Parent = this.btnReporteNacional;
+            this.btnReporteNacional.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporteNacional.CustomImages.Parent = this.btnReporteNacional;
+            this.AnimacionMenuLateral.SetDecoration(this.btnReporteNacional, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnReporteNacional.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btnReporteNacional.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnReporteNacional.ForeColor = System.Drawing.Color.White;
+            this.btnReporteNacional.HoverState.Parent = this.btnReporteNacional;
+            this.btnReporteNacional.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteNacional.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnReporteNacional.Location = new System.Drawing.Point(12, 40);
+            this.btnReporteNacional.Name = "btnReporteNacional";
+            this.btnReporteNacional.ShadowDecoration.Parent = this.btnReporteNacional;
+            this.btnReporteNacional.Size = new System.Drawing.Size(156, 35);
+            this.btnReporteNacional.TabIndex = 7;
+            this.btnReporteNacional.Text = "Nacionales";
+            this.btnReporteNacional.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnReportes
             // 
@@ -927,22 +927,22 @@
             // 
             this.AnimacionMenuLateral.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.AnimacionMenuLateral.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.AnimacionMenuLateral.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.AnimacionMenuLateral.DefaultAnimation = animation1;
             // 
             // Vista_Principal
             // 
@@ -996,9 +996,9 @@
         public Guna.UI2.WinForms.Guna2Button btbFuncionario_MD;
         public Guna.UI2.WinForms.Guna2Button btnAsignaciones;
         public System.Windows.Forms.Panel pnlReportes;
-        public Guna.UI2.WinForms.Guna2Button btnLocal;
-        public Guna.UI2.WinForms.Guna2Button btnEstatal;
-        public Guna.UI2.WinForms.Guna2Button btnNacional;
+        public Guna.UI2.WinForms.Guna2Button btnReporteLocal;
+        public Guna.UI2.WinForms.Guna2Button btnReporteEstatal;
+        public Guna.UI2.WinForms.Guna2Button btnReporteNacional;
         public Guna.UI2.WinForms.Guna2Button btnReportes;
         public System.Windows.Forms.Label lblNomUsuario;
         public Guna.UI2.WinForms.Guna2Button btnCerrarSesion;

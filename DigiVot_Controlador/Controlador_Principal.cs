@@ -66,7 +66,14 @@ namespace DigiVot_Controlador
             vPrincipal.btnFuncionarios.Click += Click_Funcionarios;
             vPrincipal.btnCasillaVirtual.Click += Click_Casillas;
             vPrincipal.btnMesaDirectiva.Click += Click_Mesa;
+            vPrincipal.btnReporteNacional.Click += Clik_ReporteNacional;
 
+        }
+
+        private void Clik_ReporteNacional(object sender, EventArgs e)
+        {
+            Vista_ReporteNacional vista_ReporteNacional = new Vista_ReporteNacional();
+            CentrarFormularios(vista_ReporteNacional);
         }
 
         private void Click_Mesa(object sender, EventArgs e)
