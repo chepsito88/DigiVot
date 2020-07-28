@@ -38,3 +38,16 @@ C:\Projecto\Projecto_Equipo1\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.c
 C:\Projecto\Projecto_Equipo1\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.csproj.CopyComplete
 C:\Projecto\Projecto_Equipo1\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.dll
 C:\Projecto\Projecto_Equipo1\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.pdb
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\DigiVot_Controlador.dll
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\DigiVot_Controlador.pdb
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\DigiVot_Modelo.dll
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\DigiVot_Vista.dll
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\FontAwesome.Sharp.dll
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\PlaceholderTextBox.dll
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\DigiVot_Modelo.pdb
+C:\Projecto\DigiVot\DigiVot_Controlador\bin\Debug\DigiVot_Vista.pdb
+C:\Projecto\DigiVot\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.csprojAssemblyReference.cache
+C:\Projecto\DigiVot\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.csproj.CoreCompileInputs.cache
+C:\Projecto\DigiVot\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.csproj.CopyComplete
+C:\Projecto\DigiVot\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.dll
+C:\Projecto\DigiVot\DigiVot_Controlador\obj\Debug\DigiVot_Controlador.pdb

@@ -16,5 +16,10 @@ namespace DigiVot_Vista
         {
             InitializeComponent();
         }
+
+        private void grpOperaciones_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -52,6 +52,9 @@
             // 
             // pnlPartido
             // 
+            this.pnlPartido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.pnlPartido.BorderRadius = 5;
+            this.pnlPartido.BorderThickness = 2;
             this.pnlPartido.Controls.Add(this.btnImagen);
             this.pnlPartido.Controls.Add(this.pbxPartido);
             this.pnlPartido.Controls.Add(this.lblNombre);
@@ -132,6 +135,9 @@
             // 
             // grpOperaciones
             // 
+            this.grpOperaciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.grpOperaciones.BorderRadius = 5;
+            this.grpOperaciones.BorderThickness = 2;
             this.grpOperaciones.Controls.Add(this.btnLimpiar);
             this.grpOperaciones.Controls.Add(this.btnEliminar);
             this.grpOperaciones.Controls.Add(this.btnEditar);
@@ -143,7 +149,7 @@
             this.grpOperaciones.Location = new System.Drawing.Point(70, 274);
             this.grpOperaciones.Name = "grpOperaciones";
             this.grpOperaciones.ShadowDecoration.Parent = this.grpOperaciones;
-            this.grpOperaciones.Size = new System.Drawing.Size(159, 329);
+            this.grpOperaciones.Size = new System.Drawing.Size(184, 329);
             this.grpOperaciones.TabIndex = 31;
             this.grpOperaciones.Text = "Operaciones";
             this.grpOperaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -158,7 +164,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.HoverState.Parent = this.btnLimpiar;
-            this.btnLimpiar.Location = new System.Drawing.Point(32, 270);
+            this.btnLimpiar.Location = new System.Drawing.Point(51, 270);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.ShadowDecoration.Parent = this.btnLimpiar;
             this.btnLimpiar.Size = new System.Drawing.Size(88, 40);
@@ -175,7 +181,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(31, 201);
+            this.btnEliminar.Location = new System.Drawing.Point(51, 201);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
             this.btnEliminar.Size = new System.Drawing.Size(88, 40);
@@ -192,7 +198,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.HoverState.Parent = this.btnEditar;
-            this.btnEditar.Location = new System.Drawing.Point(28, 133);
+            this.btnEditar.Location = new System.Drawing.Point(51, 133);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
             this.btnEditar.Size = new System.Drawing.Size(88, 40);
@@ -209,7 +215,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(26, 68);
+            this.btnGuardar.Location = new System.Drawing.Point(51, 68);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
             this.btnGuardar.Size = new System.Drawing.Size(88, 40);
@@ -218,17 +224,20 @@
             // 
             // grpListaCandidatos
             // 
+            this.grpListaCandidatos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.grpListaCandidatos.BorderRadius = 5;
+            this.grpListaCandidatos.BorderThickness = 2;
             this.grpListaCandidatos.Controls.Add(this.dtgPartidos);
             this.grpListaCandidatos.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpListaCandidatos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.grpListaCandidatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpListaCandidatos.ForeColor = System.Drawing.Color.White;
-            this.grpListaCandidatos.Location = new System.Drawing.Point(249, 274);
+            this.grpListaCandidatos.Location = new System.Drawing.Point(312, 274);
             this.grpListaCandidatos.Name = "grpListaCandidatos";
             this.grpListaCandidatos.ShadowDecoration.Parent = this.grpListaCandidatos;
-            this.grpListaCandidatos.Size = new System.Drawing.Size(336, 327);
+            this.grpListaCandidatos.Size = new System.Drawing.Size(273, 327);
             this.grpListaCandidatos.TabIndex = 30;
-            this.grpListaCandidatos.Text = "Listado de Candidatos";
+            this.grpListaCandidatos.Text = "Listado de Partidos";
             this.grpListaCandidatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtgPartidos
@@ -264,7 +273,7 @@
             this.dtgPartidos.Name = "dtgPartidos";
             this.dtgPartidos.RowHeadersVisible = false;
             this.dtgPartidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPartidos.Size = new System.Drawing.Size(308, 262);
+            this.dtgPartidos.Size = new System.Drawing.Size(240, 262);
             this.dtgPartidos.TabIndex = 30;
             this.dtgPartidos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgPartidos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -293,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(655, 618);
             this.Controls.Add(this.grpOperaciones);
             this.Controls.Add(this.grpListaCandidatos);

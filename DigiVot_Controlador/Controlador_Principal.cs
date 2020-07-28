@@ -71,14 +71,18 @@ namespace DigiVot_Controlador
 
         private void Click_Mesa(object sender, EventArgs e)
         {
-            Vista_MesaDirectiva vista_Mesa = new Vista_MesaDirectiva();
+            Vista_Mesa vista_Mesa = new Vista_Mesa();
+            VO_MesaDirectiva vo_Mesa = new VO_MesaDirectiva();
+            Controlador_Mesa con_Mesa = new Controlador_Mesa(vista_Mesa,vo_Mesa);
             CentrarFormularios(vista_Mesa);
         }
 
         private void Click_Casillas(object sender, EventArgs e)
         {
-            Vista_Casillas vista_Casillas = new Vista_Casillas();
-            CentrarFormularios(vista_Casillas);
+            Vista_Casillas vista_Casilla = new Vista_Casillas();
+            VO_Casilla vo_Casilla = new VO_Casilla();
+            Controlador_Casilla con_Casilla = new Controlador_Casilla(vista_Casilla,vo_Casilla);
+            CentrarFormularios(vista_Casilla);
         }
 
         private void Click_Funcionarios(object sender, EventArgs e)
@@ -107,9 +111,10 @@ namespace DigiVot_Controlador
 
         private void CLick_Ciudadano(object sender, EventArgs e)
         {
-            Vista_Ciudadano vCiudadano = new Vista_Ciudadano();
-            //Controlador_Asignador conAsignador = new Controlador_Asignador(vAsignador);
-            CentrarFormularios(vCiudadano );
+            Vista_Ciudadano vista_Ciudadano = new Vista_Ciudadano();
+            VO_Ciudadano vo_Ciudadano = new VO_Ciudadano();
+            Controlador_Ciudadano con_Ciudadano = new Controlador_Ciudadano(vista_Ciudadano,vo_Ciudadano);
+            CentrarFormularios(vista_Ciudadano);
         }
 
         private void Click_Candidatos(object sender, EventArgs e)

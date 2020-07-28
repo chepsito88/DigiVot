@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlElecciones = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -62,10 +62,10 @@
             this.pnlElecciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.pnlElecciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlElecciones.ForeColor = System.Drawing.Color.White;
-            this.pnlElecciones.Location = new System.Drawing.Point(70, 15);
+            this.pnlElecciones.Location = new System.Drawing.Point(151, 27);
             this.pnlElecciones.Name = "pnlElecciones";
             this.pnlElecciones.ShadowDecoration.Parent = this.pnlElecciones;
-            this.pnlElecciones.Size = new System.Drawing.Size(515, 220);
+            this.pnlElecciones.Size = new System.Drawing.Size(425, 220);
             this.pnlElecciones.TabIndex = 21;
             this.pnlElecciones.Text = "Datos de la Elección";
             this.pnlElecciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -76,7 +76,7 @@
             this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
             this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblDescripcion.Location = new System.Drawing.Point(127, 131);
+            this.lblDescripcion.Location = new System.Drawing.Point(105, 132);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(101, 18);
             this.lblDescripcion.TabIndex = 4;
@@ -88,7 +88,7 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblNombre.Location = new System.Drawing.Point(87, 79);
+            this.lblNombre.Location = new System.Drawing.Point(65, 80);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(141, 18);
             this.lblNombre.TabIndex = 4;
@@ -107,7 +107,7 @@
             this.txtDescripcion.FocusedState.Parent = this.txtDescripcion;
             this.txtDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescripcion.HoverState.Parent = this.txtDescripcion;
-            this.txtDescripcion.Location = new System.Drawing.Point(250, 125);
+            this.txtDescripcion.Location = new System.Drawing.Point(209, 126);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(9);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.PasswordChar = '\0';
@@ -130,7 +130,7 @@
             this.txtNombre.FocusedState.Parent = this.txtNombre;
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(250, 73);
+            this.txtNombre.Location = new System.Drawing.Point(209, 74);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
@@ -153,10 +153,10 @@
             this.grpOperaciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.grpOperaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpOperaciones.ForeColor = System.Drawing.Color.White;
-            this.grpOperaciones.Location = new System.Drawing.Point(70, 274);
+            this.grpOperaciones.Location = new System.Drawing.Point(43, 274);
             this.grpOperaciones.Name = "grpOperaciones";
             this.grpOperaciones.ShadowDecoration.Parent = this.grpOperaciones;
-            this.grpOperaciones.Size = new System.Drawing.Size(159, 329);
+            this.grpOperaciones.Size = new System.Drawing.Size(184, 329);
             this.grpOperaciones.TabIndex = 33;
             this.grpOperaciones.Text = "Operaciones";
             this.grpOperaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -171,7 +171,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.HoverState.Parent = this.btnLimpiar;
-            this.btnLimpiar.Location = new System.Drawing.Point(32, 270);
+            this.btnLimpiar.Location = new System.Drawing.Point(52, 270);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.ShadowDecoration.Parent = this.btnLimpiar;
             this.btnLimpiar.Size = new System.Drawing.Size(88, 40);
@@ -188,7 +188,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(31, 201);
+            this.btnEliminar.Location = new System.Drawing.Point(52, 201);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
             this.btnEliminar.Size = new System.Drawing.Size(88, 40);
@@ -205,7 +205,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.HoverState.Parent = this.btnEditar;
-            this.btnEditar.Location = new System.Drawing.Point(28, 133);
+            this.btnEditar.Location = new System.Drawing.Point(52, 133);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
             this.btnEditar.Size = new System.Drawing.Size(88, 40);
@@ -222,7 +222,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(26, 68);
+            this.btnGuardar.Location = new System.Drawing.Point(52, 68);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
             this.btnGuardar.Size = new System.Drawing.Size(88, 40);
@@ -239,40 +239,40 @@
             this.grpListaCandidatos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.grpListaCandidatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpListaCandidatos.ForeColor = System.Drawing.Color.White;
-            this.grpListaCandidatos.Location = new System.Drawing.Point(249, 274);
+            this.grpListaCandidatos.Location = new System.Drawing.Point(255, 274);
             this.grpListaCandidatos.Name = "grpListaCandidatos";
             this.grpListaCandidatos.ShadowDecoration.Parent = this.grpListaCandidatos;
-            this.grpListaCandidatos.Size = new System.Drawing.Size(336, 327);
+            this.grpListaCandidatos.Size = new System.Drawing.Size(427, 327);
             this.grpListaCandidatos.TabIndex = 32;
             this.grpListaCandidatos.Text = "Listado de tipos Elecciones";
             this.grpListaCandidatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtgEleciones
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dtgEleciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dtgEleciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgEleciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgEleciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtgEleciones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgEleciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgEleciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEleciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEleciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtgEleciones.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgEleciones.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgEleciones.DefaultCellStyle = dataGridViewCellStyle15;
             this.dtgEleciones.EnableHeadersVisualStyles = false;
             this.dtgEleciones.GridColor = System.Drawing.Color.White;
             this.dtgEleciones.Location = new System.Drawing.Point(15, 51);
@@ -280,7 +280,7 @@
             this.dtgEleciones.Name = "dtgEleciones";
             this.dtgEleciones.RowHeadersVisible = false;
             this.dtgEleciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEleciones.Size = new System.Drawing.Size(308, 262);
+            this.dtgEleciones.Size = new System.Drawing.Size(392, 262);
             this.dtgEleciones.TabIndex = 30;
             this.dtgEleciones.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgEleciones.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -292,7 +292,7 @@
             this.dtgEleciones.ThemeStyle.GridColor = System.Drawing.Color.White;
             this.dtgEleciones.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.dtgEleciones.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgEleciones.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgEleciones.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgEleciones.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgEleciones.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgEleciones.ThemeStyle.HeaderStyle.Height = 30;
@@ -310,7 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(655, 618);
+            this.ClientSize = new System.Drawing.Size(720, 618);
             this.Controls.Add(this.grpOperaciones);
             this.Controls.Add(this.grpListaCandidatos);
             this.Controls.Add(this.pnlElecciones);

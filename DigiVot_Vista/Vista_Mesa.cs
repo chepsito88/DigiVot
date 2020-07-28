@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DigiVot_Vista
 {
-    public partial class Vista_MesaDirectiva : Form
+    public partial class Vista_Mesa : Form
     {
-        public Vista_MesaDirectiva()
+        public Vista_Mesa()
         {
             InitializeComponent();
         }

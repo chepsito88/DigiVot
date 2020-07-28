@@ -79,6 +79,12 @@
     <Compile Include="Vista_Casillas.Designer.cs">
       <DependentUpon>Vista_Casillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista_Mesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista_Mesa.Designer.cs">
+      <DependentUpon>Vista_Mesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista_Ciudadano.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,12 +102,6 @@
     </Compile>
     <Compile Include="Vista_Login.Designer.cs">
       <DependentUpon>Vista_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista_MesaDirectiva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista_MesaDirectiva.Designer.cs">
-      <DependentUpon>Vista_MesaDirectiva.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista_Partidos.cs">
       <SubType>Form</SubType>
@@ -127,6 +127,12 @@
     <Compile Include="Vista_Reglas.Designer.cs">
       <DependentUpon>Vista_Reglas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista_Usuarios.Designer.cs">
+      <DependentUpon>Vista_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista_Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     <EmbeddedResource Include="Vista_Candidato.resx">
       <DependentUpon>Vista_Candidato.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista_Casillas.resx">
+      <DependentUpon>Vista_Casillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista_Mesa.resx">
+      <DependentUpon>Vista_Mesa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista_Ciudadano.resx">
       <DependentUpon>Vista_Ciudadano.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista_Reglas.resx">
       <DependentUpon>Vista_Reglas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista_Usuarios.resx">
+      <DependentUpon>Vista_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista_Splash.resx">
       <DependentUpon>Vista_Splash.cs</DependentUpon>

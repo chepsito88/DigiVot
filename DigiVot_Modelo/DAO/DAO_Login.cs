@@ -48,10 +48,22 @@ namespace DigiVot_Modelo
                 if (Dtt.Rows.Count != 0)
                 {
                     VO_User user = new VO_User();
-                    user.Nombre = Dtt.Rows[0][0].ToString();
-                    user.Puesto = Dtt.Rows[0][1].ToString();
-                    user.idUser = int.Parse(Dtt.Rows[0][2].ToString());
-                    user.Reglas = Dtt.Rows[0][3].ToString();
+                    user.Curp = Dtt.Rows[0][0].ToString();
+                    user.Nombre = Dtt.Rows[0][1].ToString();
+                    user.Paterno= Dtt.Rows[0][2].ToString();
+                    user.Materno = Dtt.Rows[0][3].ToString();
+                    user.Puesto = Dtt.Rows[0][4].ToString();
+                    user.idUser = int.Parse(Dtt.Rows[0][5].ToString());
+                    user.Reglas = Dtt.Rows[0][6].ToString();                    
+                    user.Celular = Dtt.Rows[0][8].ToString();
+                    user.Email = Dtt.Rows[0][9].ToString();
+                    user.usuario = Dtt.Rows[0][10].ToString();
+                    byte[] datos = new byte[0];
+                    if (!(Dtt.Rows[0][7] is DBNull))
+                    {
+                        datos = (byte[])Dtt.Rows[0][7];
+                    }                                        
+                    user.datos = datos;
                     lstUser.Add(true);
                     lstUser.Add(user);
                 }

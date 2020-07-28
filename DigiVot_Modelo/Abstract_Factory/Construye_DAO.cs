@@ -20,6 +20,9 @@ namespace DigiVot_Modelo
                 case 7: return new DAO_Ciudadano();
                 case 8: return new DAO_Elecciones();
                 case 9:return new DAO_Funcionario();
+                case 10: return new DAO_Mesa();
+                case 11: return new DAO_Localidades();
+                case 12: return new DAO_Casilla();
                 default: return null;
             }
         }
