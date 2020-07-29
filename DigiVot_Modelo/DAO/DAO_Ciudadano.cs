@@ -123,8 +123,7 @@ namespace DigiVot_Modelo
                         vo_Ciudadano.Calle = Dtt.Rows[i][9].ToString();
                         vo_Ciudadano.Numero = Dtt.Rows[i][10].ToString();
                         vo_Ciudadano.idLocalidad = int.Parse(Dtt.Rows[i][11].ToString());
-                    }
-                                                    
+                    }                                                    
                     lstCiudadanos.Add(vo_Ciudadano);
                 }
                 return lstCiudadanos;

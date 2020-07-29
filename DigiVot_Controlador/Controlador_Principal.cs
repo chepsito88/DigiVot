@@ -8,6 +8,7 @@ using DigiVot_Modelo;
 using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 
 namespace DigiVot_Controlador
 {
@@ -15,6 +16,7 @@ namespace DigiVot_Controlador
     {
 
         #region Declaracion de Variables
+        private ICrud InstanciaVotosLocales = Construye_Objeto.intancias(13);
         Vista_Principal vPrincipal;
         VO_User voUser;       
         string _Rol;
@@ -27,8 +29,11 @@ namespace DigiVot_Controlador
 
         public Controlador_Principal(Vista_Principal vPrincipal,VO_User voUser)
         {
+
             this.vPrincipal = vPrincipal;
             this.voUser = voUser;
+            MemoryStream ms = new MemoryStream(voUser.datos);
+            vPrincipal.ptbFoto.Image = Bitmap.FromStream(ms);
             Iniciar();
             Eventos_Botones();
             Eventos_Timer();
@@ -67,12 +72,24 @@ namespace DigiVot_Controlador
             vPrincipal.btnCasillaVirtual.Click += Click_Casillas;
             vPrincipal.btnMesaDirectiva.Click += Click_Mesa;
             vPrincipal.btnUsuarios.Click += Click_Usuarios;
+            vPrincipal.btnReporteNacional.Click += Click_Nacional;
 
+        }
+
+        private void Click_Nacional(object sender, EventArgs e)
+        {
+            Vista_Reportes vista_ReporteNacional = new Vista_Reportes();
+            VO_Reportes vo_Reportes = new VO_Reportes();
+            Controlador_Reportes con_VotosEstatales = new Controlador_Reportes(vista_ReporteNacional, vo_Reportes, "rptNacionales", "dtsReporteNacional", InstanciaVotosLocales.Listar("sp_TotalVotosNacionales"));
+            CentrarFormularios(vista_ReporteNacional);
         }
 
         private void Click_Usuarios(object sender, EventArgs e)
         {
             Vista_Usuarios vista_Usuarios = new Vista_Usuarios();
+            VO_User vo_User = new VO_User();
+            VO_Ciudadano vo_Ciudadano = new VO_Ciudadano();
+            Controlador_Usuarios con_Usuarios = new Controlador_Usuarios(vista_Usuarios,vo_User,vo_Ciudadano);
             CentrarFormularios(vista_Usuarios);
         }
 
@@ -248,8 +265,7 @@ namespace DigiVot_Controlador
         private void Iniciar()
         {
             _Rol= voUser.Puesto;
-            vPrincipal.Text = "Bienvenido: " + voUser.Nombre;
-            vPrincipal.lblNomUsuario.Text = voUser.Nombre;
+            vPrincipal.lblNomUsuario.Text = "Bienvenido: " + voUser.Nombre.ToUpper()+" "+voUser.Paterno.ToUpper()+" "+voUser.Materno.ToUpper();
             Permisos();
         }
         private void Permisos()

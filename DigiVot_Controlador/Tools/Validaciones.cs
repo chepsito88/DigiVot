@@ -10,6 +10,17 @@ namespace DigiVot_Controlador
 {
     class Validaciones
     {
+        public bool Buscar(string TextoABuscar, DataGridView grid)
+        {
+            foreach (DataGridViewRow fila  in grid.Rows)
+            {                
+                if (fila.Cells[0].Value.ToString()==TextoABuscar)
+                {                    
+                    return true;
+                }
+            }
+            return false;
+        }
         public bool revisaContenidoGrid(DataGridView data)
         {
             int num = data.RowCount;
@@ -37,19 +48,22 @@ namespace DigiVot_Controlador
             }
         }
 
-        public bool validaModificacion(int idEleccion, int idPartido,bool verifica){
-            if (idEleccion == -1 && idPartido == -1 && verifica!=true)
+        public bool validaModificacion(int idEleccion, int idPartido, bool verifica)
+        {
+            if (idEleccion == -1 && idPartido == -1 && verifica != true)
             {
                 MessageBox.Show("Modifique al menos un dato.....");
                 return false;
-            }else {
+            }
+            else
+            {
                 return true;
             }
         }
 
         public bool validaModificacionPartido(string Partido, bool verifica)
         {
-            if (Partido==string.Empty && verifica != true)
+            if (Partido == string.Empty && verifica != true)
             {
                 MessageBox.Show("Datos necesarios.....");
                 return false;
@@ -58,6 +72,6 @@ namespace DigiVot_Controlador
             {
                 return true;
             }
-        }
+        }        
     }
 }
