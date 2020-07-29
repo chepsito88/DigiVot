@@ -86,7 +86,7 @@ namespace DigiVot_Modelo
             {
                 Encabezado();
                 cmdComando.CommandText = "sp_Elimina_Funcionario";
-                cmdComando.Parameters.AddWithValue("@idFuncionario", Funcionario.idFuncionario);
+                cmdComando.Parameters.AddWithValue("@Nombre", Funcionario.Funcionario);
                 cmdComando.ExecuteNonQuery();
 
                 return true;

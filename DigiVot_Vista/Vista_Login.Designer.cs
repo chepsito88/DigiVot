@@ -102,7 +102,7 @@
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(349, 88);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PlaceholderText = "chepsito";
+            this.txtUsuario.PlaceholderText = "Usuario";
             this.txtUsuario.Size = new System.Drawing.Size(395, 31);
             this.txtUsuario.TabIndex = 21;
             // 

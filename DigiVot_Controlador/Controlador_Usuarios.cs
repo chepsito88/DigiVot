@@ -33,13 +33,6 @@ namespace DigiVot_Controlador
             vista_Usuarios.dtgUsuarios.DataBindingComplete += Limpiar;
         }
 
-        private void cargaInicial()
-        {
-            vista_Usuarios.cmbCargo.DataSource = null;            
-            vista_Usuarios.cmbCargo.Items.Clear();
-            vista_Usuarios.cmbCargo.Items.Add("Elije");
-            vista_Usuarios.cmbCargo.SelectedIndex = 0;
-        }
 
         //Metodo que se encarga de escuchar los eventos de botones
         private void Eventos_Botones()
@@ -53,6 +46,16 @@ namespace DigiVot_Controlador
             vista_Usuarios.dtgUsuarios.CellClick += Click_Fila;
             vista_Usuarios.cmbCargo.Click += Click_ComboCargo;
         }
+
+        private void cargaInicial()
+        {
+            vista_Usuarios.cmbCargo.DataSource = null;            
+            vista_Usuarios.cmbCargo.Items.Clear();
+            vista_Usuarios.cmbCargo.Items.Add("Elije");
+            vista_Usuarios.cmbCargo.SelectedIndex = 0;
+        }
+
+       
 
         private void Click_ComboCargo(object sender, EventArgs e)
         {
@@ -212,6 +215,7 @@ namespace DigiVot_Controlador
                 vista_Usuarios.dtgUsuarios.Columns[8].Visible = false;
                 vista_Usuarios.dtgUsuarios.Columns[11].Visible = false;
                 vista_Usuarios.dtgUsuarios.Columns[12].Visible = false;
+                vista_Usuarios.dtgUsuarios.Columns[13].Visible = false;
             }
             else
             {

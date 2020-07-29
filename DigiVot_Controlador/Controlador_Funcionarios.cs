@@ -41,11 +41,13 @@ namespace DigiVot_Controlador
 
         private void Click_Fila(object sender, DataGridViewCellEventArgs e)
         {
+            
             vista_Funcionarios.erpAviso.Clear();
             vista_Funcionarios.btnGuardar.Enabled = false;
             vo_Funcionarios.idFuncionario = int.Parse(vista_Funcionarios.dtgFuncionarios.Rows[vista_Funcionarios.dtgFuncionarios.CurrentRow.Index].Cells[0].Value.ToString());
             vista_Funcionarios.txtNombre.Text = vista_Funcionarios.dtgFuncionarios.Rows[vista_Funcionarios.dtgFuncionarios.CurrentRow.Index].Cells[1].Value.ToString();
             vista_Funcionarios.txtDescripcion.Text = vista_Funcionarios.dtgFuncionarios.Rows[vista_Funcionarios.dtgFuncionarios.CurrentRow.Index].Cells[2].Value.ToString();
+            vo_Funcionarios.Funcionario = vista_Funcionarios.txtNombre.Text;
         }
 
         #region Metodos Guardar, Modificar, Eliminar y Listar  
@@ -103,6 +105,7 @@ namespace DigiVot_Controlador
             vista_Funcionarios.erpAviso.Clear();            
             if (valida.revisaSeleccionado(vista_Funcionarios.dtgFuncionarios))
             {
+                
                 if (InstanciaFuncionarios.Eliminar(vo_Funcionarios))
                 {
                     llenaGrid();
