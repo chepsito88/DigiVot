@@ -18,7 +18,7 @@ namespace DigiVot_Controlador
         #region Declaracion de Variables
         private ICrud InstanciaVotosLocales = Construye_Objeto.intancias(13);
         Vista_Principal vPrincipal;
-        VO_User voUser;       
+        VO_User voUser;
         string _Rol;
         private bool esColapzadoAltas;
         private bool esColapzadoReportes;
@@ -27,7 +27,7 @@ namespace DigiVot_Controlador
         private static bool esColapzadoAyuda;
         #endregion
 
-        public Controlador_Principal(Vista_Principal vPrincipal,VO_User voUser)
+        public Controlador_Principal(Vista_Principal vPrincipal, VO_User voUser)
         {
 
             this.vPrincipal = vPrincipal;
@@ -89,7 +89,7 @@ namespace DigiVot_Controlador
             Vista_Usuarios vista_Usuarios = new Vista_Usuarios();
             VO_User vo_User = new VO_User();
             VO_Ciudadano vo_Ciudadano = new VO_Ciudadano();
-            Controlador_Usuarios con_Usuarios = new Controlador_Usuarios(vista_Usuarios,vo_User,vo_Ciudadano);
+            Controlador_Usuarios con_Usuarios = new Controlador_Usuarios(vista_Usuarios, vo_User, vo_Ciudadano);
             CentrarFormularios(vista_Usuarios);
         }
 
@@ -97,7 +97,7 @@ namespace DigiVot_Controlador
         {
             Vista_Mesa vista_Mesa = new Vista_Mesa();
             VO_MesaDirectiva vo_Mesa = new VO_MesaDirectiva();
-            Controlador_Mesa con_Mesa = new Controlador_Mesa(vista_Mesa,vo_Mesa);
+            Controlador_Mesa con_Mesa = new Controlador_Mesa(vista_Mesa, vo_Mesa);
             CentrarFormularios(vista_Mesa);
         }
 
@@ -105,7 +105,7 @@ namespace DigiVot_Controlador
         {
             Vista_Casillas vista_Casilla = new Vista_Casillas();
             VO_Casilla vo_Casilla = new VO_Casilla();
-            Controlador_Casilla con_Casilla = new Controlador_Casilla(vista_Casilla,vo_Casilla);
+            Controlador_Casilla con_Casilla = new Controlador_Casilla(vista_Casilla, vo_Casilla);
             CentrarFormularios(vista_Casilla);
         }
 
@@ -121,7 +121,7 @@ namespace DigiVot_Controlador
         {
             Vista_Tipo_Elecciones vista_Elecciones = new Vista_Tipo_Elecciones();
             VO_Tipo_Eleccion vo_Elecciones = new VO_Tipo_Eleccion();
-            Controlador_Elecciones con_Elecciones = new Controlador_Elecciones(vista_Elecciones,vo_Elecciones);
+            Controlador_Elecciones con_Elecciones = new Controlador_Elecciones(vista_Elecciones, vo_Elecciones);
             CentrarFormularios(vista_Elecciones);
         }
 
@@ -129,7 +129,7 @@ namespace DigiVot_Controlador
         {
             Vista_Partidos vista_Partidos = new Vista_Partidos();
             VO_Partidos vo_Partidos = new VO_Partidos();
-            Controlador_Partidos con_Partidos = new Controlador_Partidos(vista_Partidos,vo_Partidos);
+            Controlador_Partidos con_Partidos = new Controlador_Partidos(vista_Partidos, vo_Partidos);
             CentrarFormularios(vista_Partidos);
         }
 
@@ -137,7 +137,7 @@ namespace DigiVot_Controlador
         {
             Vista_Ciudadano vista_Ciudadano = new Vista_Ciudadano();
             VO_Ciudadano vo_Ciudadano = new VO_Ciudadano();
-            Controlador_Ciudadano con_Ciudadano = new Controlador_Ciudadano(vista_Ciudadano,vo_Ciudadano);
+            Controlador_Ciudadano con_Ciudadano = new Controlador_Ciudadano(vista_Ciudadano, vo_Ciudadano);
             CentrarFormularios(vista_Ciudadano);
         }
 
@@ -147,7 +147,7 @@ namespace DigiVot_Controlador
             VO_Candidato vo_Candidato = new VO_Candidato();
             VO_Partidos vo_Partidos = new VO_Partidos();
             VO_Ciudadano vo_Ciudadano = new VO_Ciudadano();
-            Controlador_Candidato conCandidato = new Controlador_Candidato(vCandidato,vo_Candidato,vo_Partidos,vo_Ciudadano);
+            Controlador_Candidato conCandidato = new Controlador_Candidato(vCandidato, vo_Candidato, vo_Partidos, vo_Ciudadano);
             CentrarFormularios(vCandidato);
         }
 
@@ -167,7 +167,7 @@ namespace DigiVot_Controlador
             }
         }
 
-        private bool TickTimers(Timer timer,Panel panel,bool esColapzadoPanel)
+        private bool TickTimers(Timer timer, Panel panel, bool esColapzadoPanel)
         {
             if (esColapzadoPanel)
             {
@@ -191,8 +191,8 @@ namespace DigiVot_Controlador
         }
         private void TickTmrAyuda(object sender, EventArgs e)
         {
-            esColapzadoAyuda=TickTimers(vPrincipal.tmrColapzarAyuda,vPrincipal.pnlAyuda,esColapzadoAyuda);
-        }       
+            esColapzadoAyuda = TickTimers(vPrincipal.tmrColapzarAyuda, vPrincipal.pnlAyuda, esColapzadoAyuda);
+        }
         private void TickTmrConfiguraciones(object sender, EventArgs e)
         {
             esColapzadoConfiguraciones = TickTimers(vPrincipal.tmrColapzarConfiguraciones, vPrincipal.pnlConfiguracion, esColapzadoConfiguraciones);
@@ -246,41 +246,42 @@ namespace DigiVot_Controlador
             Vista_Asignador vAsignador = new Vista_Asignador();
             Controlador_Asignador conAsignador = new Controlador_Asignador(vAsignador);
             CentrarFormularios(vAsignador);
-        } 
+        }
         private void Click_Reglas(object sender, EventArgs e)
         {
             Vista_Reglas visReglas = new Vista_Reglas();
             VO_Reglas voReglas = new VO_Reglas();
-            Controlador_Reglas conReglas = new Controlador_Reglas(visReglas,voReglas);
+            Controlador_Reglas conReglas = new Controlador_Reglas(visReglas, voReglas);
             CentrarFormularios(visReglas);
         }
         private void Perfil_Click(object sender, EventArgs e)
         {
             Vista_Perfiles vPerfil = new Vista_Perfiles();
             VO_Perfiles voPerfil = new VO_Perfiles();
-            Controlador_Perfil cPerfil = new Controlador_Perfil(vPerfil,voPerfil);
+            Controlador_Perfil cPerfil = new Controlador_Perfil(vPerfil, voPerfil);
             CentrarFormularios(vPerfil);
-                    
+
         }
         private void Iniciar()
         {
-            _Rol= voUser.Puesto;
-            vPrincipal.lblNomUsuario.Text = "Bienvenido: " + voUser.Nombre.ToUpper()+" "+voUser.Paterno.ToUpper()+" "+voUser.Materno.ToUpper();
+            _Rol = voUser.Puesto;
+            vPrincipal.lblNomUsuario.Text = "Bienvenido: " + voUser.Nombre.ToUpper() + " " + voUser.Paterno.ToUpper() + " " + voUser.Materno.ToUpper();
             Permisos();
         }
         private void Permisos()
         {
-            if (voUser.Puesto!= "Administrador")
+            if (voUser.Puesto != "Administrador")
             {
                 vPrincipal.pnlConfiguracion.Visible = false;
             }
 
-           vPrincipal.pnlAltas.Visible = TieneRegla("4,13");
-           vPrincipal.pnlConfiguracion.Visible = TieneRegla("4,13");
-           vPrincipal.pnlReportes.Visible=TieneRegla("4,13,14,15");
-           vPrincipal.pnlAsignaciones.Visible = false;
-           vPrincipal.pnlAyuda.Visible = false;
+            vPrincipal.pnlAltas.Visible = TieneRegla("2");
+            vPrincipal.pnlConfiguracion.Visible = TieneRegla("5");
+            vPrincipal.pnlReportes.Visible = TieneRegla("3");
+            vPrincipal.pnlAsignaciones.Visible = false;
+            vPrincipal.pnlAyuda.Visible = false;
             vPrincipal.btnPerfiles.Visible = false;
+            vPrincipal.btnReglas.Visible = false;
 
         }
         bool TieneRegla(string Reglas_checar)
@@ -296,7 +297,8 @@ namespace DigiVot_Controlador
             return false;
         }
 
-        private void CentrarFormularios(Form vista) {
+        private void CentrarFormularios(Form vista)
+        {
             if (!Verificador())
             {
                 vista.TopLevel = false;
@@ -308,7 +310,7 @@ namespace DigiVot_Controlador
             {
                 MessageBox.Show("Existe una ventana abierta...");
             }
-                
+
         }
 
         private bool Verificador()

@@ -34,7 +34,7 @@ namespace DigiVot_Controlador
             string separador = "";
             foreach (DataGridViewRow row in vAsignador.dtReglas.Rows)
             {
-                if (Convert.ToBoolean(row.Cells["Selected"].Value))
+                if ((Boolean)row.Cells[0].Value)
                 {
                     voPerfilReglas.Regla += separador + row.Cells["id"].Value;
                     separador = ",";

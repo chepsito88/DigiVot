@@ -79,7 +79,7 @@ namespace DigiVot_Modelo
                 }
                 else
                 {
-                    cmdComando.Parameters.AddWithValue("@Curp", User.Curp);
+                    
                     cmdComando.Parameters.AddWithValue("@IdUser", User.idUser);
                     if (User.picture != null)
                     {
