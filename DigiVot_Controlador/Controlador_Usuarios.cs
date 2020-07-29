@@ -170,6 +170,7 @@ namespace DigiVot_Controlador
             {
                 if (valida.revisaSeleccionado(vista_Usuarios.dtgUsuarios))
                 {
+                    vo_User.Curp = vista_Usuarios.txtCurp.Text;
                     if (InstanciaUsuarios.Eliminar(vo_User))
                     {
                         llenaGrid();

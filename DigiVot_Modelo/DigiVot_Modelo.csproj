@@ -58,8 +58,8 @@
     <Compile Include="DAO\DAO_Mesa.cs" />
     <Compile Include="DAO\DAO_Localidades.cs" />
     <Compile Include="DAO\DAO_Casilla.cs" />
-    <Compile Include="DAO_Reportes.cs" />
-    <Compile Include="DAO_Usuario.cs" />
+    <Compile Include="DAO\DAO_Reportes.cs" />
+    <Compile Include="DAO\DAO_Usuario.cs" />
     <Compile Include="Singleton\Singleton_Conexion.cs" />
     <Compile Include="VO\VO_Candidato.cs" />
     <Compile Include="VO\VO_Reglas.cs" />
@@ -74,7 +74,7 @@
     <Compile Include="VO\VO_MesaDirectiva.cs" />
     <Compile Include="VO\VO_Localidad.cs" />
     <Compile Include="VO\VO_Casilla.cs" />
-    <Compile Include="VO_Reportes.cs" />
+    <Compile Include="VO\VO_Reportes.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

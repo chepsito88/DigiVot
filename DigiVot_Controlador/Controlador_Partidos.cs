@@ -45,6 +45,8 @@ namespace DigiVot_Controlador
 
         private void Click_Fila(object sender, DataGridViewCellEventArgs e)
         {
+            vista_Partidos.erpAviso.Clear();
+            vista_Partidos.btnGuardar.Enabled = false;
             vo_Partidos.id_Partido = int.Parse(vista_Partidos.dtgPartidos.Rows[vista_Partidos.dtgPartidos.CurrentRow.Index].Cells[0].Value.ToString());
             vista_Partidos.txtNombre.Text = vista_Partidos.dtgPartidos.Rows[vista_Partidos.dtgPartidos.CurrentRow.Index].Cells[1].Value.ToString();
             byte[] datos = (byte[])vista_Partidos.dtgPartidos.Rows[vista_Partidos.dtgPartidos.CurrentRow.Index].Cells[2].Value;
@@ -56,13 +58,8 @@ namespace DigiVot_Controlador
         #region Metodos Guardar, Modificar, Eliminar y Listar  
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
-        {
-            bool verifica = (ventanImagen != null) ? true : false;
-            if (vista_Partidos.txtNombre.Text == "" && verifica == false)
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
+        {            
+            if (valida.Vacios(vista_Partidos, vista_Partidos.erpAviso))
             {
                 vo_Partidos.Partido = vista_Partidos.txtNombre.Text;
                 vo_Partidos.picture = vista_Partidos.pbxPartido;
@@ -83,6 +80,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para la modifiacion de la informacion en la Bds
         private void Click_Modificar(object sender, EventArgs e)
         {
+            vista_Partidos.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Partidos.dtgPartidos))
             {
                 if (valida.revisaSeleccionado(vista_Partidos.dtgPartidos))
@@ -112,6 +110,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para eliminacion de la informacion en la Bds
         private void Click_Eliminar(object sender, EventArgs e)
         {
+            vista_Partidos.erpAviso.Clear();
             if (valida.revisaSeleccionado(vista_Partidos.dtgPartidos))
             {                
                 if (InstanciaPartidos.Eliminar(vo_Partidos))
@@ -154,6 +153,7 @@ namespace DigiVot_Controlador
         #region Herramientas de ventana
         public void refrescar()
         {
+            vista_Partidos.btnGuardar.Enabled = true;
             vista_Partidos.txtNombre.Clear();
             vista_Partidos.dtgPartidos.ClearSelection();
             vista_Partidos.pbxPartido.Image = null;

@@ -41,6 +41,8 @@ namespace DigiVot_Controlador
 
         private void Click_Fila(object sender, DataGridViewCellEventArgs e)
         {
+            vista_Funcionarios.erpAviso.Clear();
+            vista_Funcionarios.btnGuardar.Enabled = false;
             vo_Funcionarios.idFuncionario = int.Parse(vista_Funcionarios.dtgFuncionarios.Rows[vista_Funcionarios.dtgFuncionarios.CurrentRow.Index].Cells[0].Value.ToString());
             vista_Funcionarios.txtNombre.Text = vista_Funcionarios.dtgFuncionarios.Rows[vista_Funcionarios.dtgFuncionarios.CurrentRow.Index].Cells[1].Value.ToString();
             vista_Funcionarios.txtDescripcion.Text = vista_Funcionarios.dtgFuncionarios.Rows[vista_Funcionarios.dtgFuncionarios.CurrentRow.Index].Cells[2].Value.ToString();
@@ -50,11 +52,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {
-            if (vista_Funcionarios.txtNombre.Text == "" && vista_Funcionarios.txtDescripcion.Text == "")
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
+            if (valida.Vacios(vista_Funcionarios, vista_Funcionarios.erpAviso))
             {
                 vo_Funcionarios.Funcionario = vista_Funcionarios.txtNombre.Text;
                 vo_Funcionarios.Descripcion = vista_Funcionarios.txtDescripcion.Text;
@@ -77,6 +75,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para la modifiacion de la informacion en la Bds
         private void Click_Modificar(object sender, EventArgs e)
         {
+            vista_Funcionarios.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Funcionarios.dtgFuncionarios))
             {
                 if (valida.revisaSeleccionado(vista_Funcionarios.dtgFuncionarios))
@@ -101,6 +100,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para eliminacion de la informacion en la Bds
         private void Click_Eliminar(object sender, EventArgs e)
         {
+            vista_Funcionarios.erpAviso.Clear();            
             if (valida.revisaSeleccionado(vista_Funcionarios.dtgFuncionarios))
             {
                 if (InstanciaFuncionarios.Eliminar(vo_Funcionarios))
@@ -139,7 +139,8 @@ namespace DigiVot_Controlador
         }
 
         private void refrescar()
-        {
+        {            
+            vista_Funcionarios.btnGuardar.Enabled = true;
             vista_Funcionarios.txtNombre.Clear();
             vista_Funcionarios.txtDescripcion.Clear();
             vo_Funcionarios = new VO_Funcionarios();

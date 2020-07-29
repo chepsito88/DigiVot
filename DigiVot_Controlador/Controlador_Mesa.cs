@@ -17,6 +17,8 @@ namespace DigiVot_Controlador
         private ICrud InstanciaMesa = Construye_Objeto.intancias(10);
         private ICrud InstanciaLocalidad = Construye_Objeto.intancias(11);
         Validaciones valida;
+        TypeAssistant assistant;
+        Boolean checador = false;
 
         public Controlador_Mesa(Vista_Mesa vista_Mesa, VO_MesaDirectiva vo_Mesa)
         {
@@ -27,8 +29,11 @@ namespace DigiVot_Controlador
             Eventos_Botones();
             llenaGrid();
             vista_Mesa.dtgMesa.DataBindingComplete += Limpiar;
-               
+            assistant = new TypeAssistant();
+            assistant.Idled += Temporizador;
         }
+
+     
 
         private void Eventos_Botones()
         {
@@ -36,35 +41,14 @@ namespace DigiVot_Controlador
             vista_Mesa.btnEditar.Click += Click_Modificar;
             vista_Mesa.btnEliminar.Click += Click_Eliminar;
             vista_Mesa.btnLimpiar.Click += Click_Limpiar;
-            vista_Mesa.dtgMesa.CellClick += Click_Fila;
-            vista_Mesa.btnBuscar.Click += Click_Buscar;
-
-        }
-
-        private void Click_Buscar(object sender, EventArgs e)
-        {
-            vo_Localidad = new VO_Localidad();
-            if (vista_Mesa.txtLocalidad.Text == "")
-            {
-                MessageBox.Show("Ingrese localidad", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else {
-                vo_Localidad.idLocalidad =int.Parse(vista_Mesa.txtLocalidad.Text);
-                List<object> lstlocalidad = InstanciaLocalidad.Listar(vo_Localidad);                
-                if ((Boolean)lstlocalidad[0])
-                {
-                    vo_Localidad = (VO_Localidad)lstlocalidad[1];
-                    vista_Mesa.txtMunicipio.Text = vo_Localidad.Municpio;
-                    vista_Mesa.txtEstado.Text = vo_Localidad.Estado;
-                }
-                else {
-                    MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }               
-            }
-        }
+            vista_Mesa.dtgMesa.CellClick += Click_Fila;            
+            vista_Mesa.txtLocalidad.TextChanged += Cambio;
+        }     
 
         private void Click_Fila(object sender, DataGridViewCellEventArgs e)
         {
+            vista_Mesa.erpAviso.Clear();
+            vista_Mesa.btnGuardar.Enabled = false;
             int Status = int.Parse(vista_Mesa.dtgMesa.Rows[vista_Mesa.dtgMesa.CurrentRow.Index].Cells[2].Value.ToString());            
             vo_Mesa.idStatus = Status;
             vo_Mesa.idMesa = int.Parse(vista_Mesa.dtgMesa.Rows[vista_Mesa.dtgMesa.CurrentRow.Index].Cells[0].Value.ToString());
@@ -83,11 +67,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {
-            if (vista_Mesa.txtNombre.Text == "" || vista_Mesa.cmbStatus.SelectedIndex==0 || vista_Mesa.txtCalle.Text=="" || vista_Mesa.txtNumero.Text=="" || vista_Mesa.txtLocalidad.Text=="" )
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
+            if (valida.Vacios(vista_Mesa, vista_Mesa.erpAviso))
             {
                 vo_Mesa.Nombre = vista_Mesa.txtNombre.Text;
                 vo_Mesa.idStatus =int.Parse(vista_Mesa.cmbStatus.SelectedIndex.ToString());
@@ -111,6 +91,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para la modifiacion de la informacion en la Bds
         private void Click_Modificar(object sender, EventArgs e)
         {
+            vista_Mesa.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Mesa.dtgMesa))
             {
                 if (valida.revisaSeleccionado(vista_Mesa.dtgMesa))
@@ -138,6 +119,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para eliminacion de la informacion en la Bds
         private void Click_Eliminar(object sender, EventArgs e)
         {
+            vista_Mesa.erpAviso.Clear();            
             if (valida.revisaContenidoGrid(vista_Mesa.dtgMesa))
             {
                 if (valida.revisaSeleccionado(vista_Mesa.dtgMesa))
@@ -195,7 +177,8 @@ namespace DigiVot_Controlador
         }
 
         private void refrescar()
-        {
+        {            
+            vista_Mesa.btnGuardar.Enabled = true;
             vista_Mesa.txtNombre.Clear();
             vista_Mesa.txtLocalidad.Clear();
             vista_Mesa.txtMunicipio.Clear();
@@ -215,6 +198,51 @@ namespace DigiVot_Controlador
             vista_Mesa.cmbStatus.DataSource = new BindingSource(test, null);
             vista_Mesa.cmbStatus.DisplayMember = "Value";
             vista_Mesa.cmbStatus.ValueMember = "Key";            
+        }
+
+
+        private void Cambio(object sender, EventArgs e)
+        {
+            assistant.TextChanged();
+        }
+
+        private void Temporizador(object sender, EventArgs e)
+        {
+            vista_Mesa.Invoke(
+           new MethodInvoker(() =>
+           {
+               if (!checador)
+               {
+                   Buscar();
+               }
+               checador = false;
+
+           }));
+        }
+
+        private void Buscar()
+        {
+            vo_Localidad = new VO_Localidad();
+            if (vista_Mesa.txtLocalidad.Text == "")
+            {
+                MessageBox.Show("Ingrese localidad", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                vo_Localidad.idLocalidad = int.Parse(vista_Mesa.txtLocalidad.Text);
+                List<object> lstlocalidad = InstanciaLocalidad.Listar(vo_Localidad);
+                if ((Boolean)lstlocalidad[0])
+                {
+                    vo_Localidad = (VO_Localidad)lstlocalidad[1];
+                    vista_Mesa.txtMunicipio.Text = vo_Localidad.Municpio;
+                    vista_Mesa.txtEstado.Text = vo_Localidad.Estado;
+                }
+                else
+                {                    
+                    MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    vista_Mesa.txtLocalidad.Clear();
+                }
+            }
         }
     }
 }

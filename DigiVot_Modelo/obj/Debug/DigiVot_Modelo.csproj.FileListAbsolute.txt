@@ -21,3 +21,4 @@ C:\Projecto\DigiVot\DigiVot_Modelo\bin\Debug\DigiVot_Modelo.pdb
 C:\Projecto\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.csproj.CoreCompileInputs.cache
 C:\Projecto\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.dll
 C:\Projecto\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.pdb
+C:\Projecto\DigiVot\DigiVot_Modelo\obj\Debug\DigiVot_Modelo.csprojAssemblyReference.cache

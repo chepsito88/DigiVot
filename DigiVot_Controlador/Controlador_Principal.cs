@@ -275,7 +275,8 @@ namespace DigiVot_Controlador
                 vPrincipal.pnlConfiguracion.Visible = false;
             }
 
-           // vPrincipal.pnlAltas.Visible = TieneRegla("4");
+           vPrincipal.pnlAltas.Visible = TieneRegla("4");
+           vPrincipal.pnlConfiguracion.Visible = TieneRegla("4");
 
         }
         bool TieneRegla(string Reglas_checar)

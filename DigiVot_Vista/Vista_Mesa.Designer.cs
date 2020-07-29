@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpOperaciones = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
@@ -42,24 +43,25 @@
             this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlDirecion = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblCalle = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
-            this.txtCalle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtLocalidad = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNumero = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMunicipio = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEstado = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbMunicipio = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.erpAviso = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.grpOperaciones.SuspendLayout();
             this.grpListaElecciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMesa)).BeginInit();
             this.pnlMesa.SuspendLayout();
             this.pnlDirecion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).BeginInit();
             this.SuspendLayout();
             // 
             // grpOperaciones
@@ -171,30 +173,30 @@
             // 
             // dtgMesa
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dtgMesa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dtgMesa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgMesa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgMesa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtgMesa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgMesa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgMesa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgMesa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgMesa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgMesa.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgMesa.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgMesa.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtgMesa.EnableHeadersVisualStyles = false;
             this.dtgMesa.GridColor = System.Drawing.Color.White;
             this.dtgMesa.Location = new System.Drawing.Point(20, 51);
@@ -233,10 +235,10 @@
             this.pnlMesa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlMesa.BorderRadius = 5;
             this.pnlMesa.BorderThickness = 2;
+            this.pnlMesa.Controls.Add(this.txtNombre);
             this.pnlMesa.Controls.Add(this.cmbStatus);
             this.pnlMesa.Controls.Add(this.lblStatus);
             this.pnlMesa.Controls.Add(this.lblNombre);
-            this.pnlMesa.Controls.Add(this.txtNombre);
             this.pnlMesa.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlMesa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.pnlMesa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,41 +294,17 @@
             this.lblNombre.TabIndex = 40;
             this.lblNombre.Text = "Nombre Mesa:";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.DefaultText = "";
-            this.txtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.DisabledState.Parent = this.txtNombre;
-            this.txtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.FocusedState.Parent = this.txtNombre;
-            this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(19, 95);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(9);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.PlaceholderText = "Mesa Directiva";
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
-            this.txtNombre.Size = new System.Drawing.Size(150, 31);
-            this.txtNombre.TabIndex = 38;
-            // 
             // pnlDirecion
             // 
             this.pnlDirecion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlDirecion.BorderRadius = 5;
             this.pnlDirecion.BorderThickness = 2;
+            this.pnlDirecion.Controls.Add(this.txtLocalidad);
+            this.pnlDirecion.Controls.Add(this.txtNumero);
+            this.pnlDirecion.Controls.Add(this.txtCalle);
             this.pnlDirecion.Controls.Add(this.lblCalle);
             this.pnlDirecion.Controls.Add(this.lblNumero);
             this.pnlDirecion.Controls.Add(this.lblLocalidad);
-            this.pnlDirecion.Controls.Add(this.btnBuscar);
-            this.pnlDirecion.Controls.Add(this.txtCalle);
-            this.pnlDirecion.Controls.Add(this.txtLocalidad);
-            this.pnlDirecion.Controls.Add(this.txtNumero);
             this.pnlDirecion.Controls.Add(this.txtMunicipio);
             this.pnlDirecion.Controls.Add(this.txtEstado);
             this.pnlDirecion.Controls.Add(this.lbMunicipio);
@@ -373,97 +351,11 @@
             this.lblLocalidad.BackColor = System.Drawing.Color.Transparent;
             this.lblLocalidad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblLocalidad.Location = new System.Drawing.Point(17, 58);
+            this.lblLocalidad.Location = new System.Drawing.Point(143, 58);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(87, 18);
+            this.lblLocalidad.Size = new System.Drawing.Size(135, 18);
             this.lblLocalidad.TabIndex = 44;
-            this.lblLocalidad.Text = "Localidad:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BorderRadius = 22;
-            this.btnBuscar.CheckedState.Parent = this.btnBuscar;
-            this.btnBuscar.CustomImages.Parent = this.btnBuscar;
-            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.HoverState.Parent = this.btnBuscar;
-            this.btnBuscar.Location = new System.Drawing.Point(275, 46);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
-            this.btnBuscar.Size = new System.Drawing.Size(88, 40);
-            this.btnBuscar.TabIndex = 0;
-            this.btnBuscar.Text = "Buscar";
-            // 
-            // txtCalle
-            // 
-            this.txtCalle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCalle.DefaultText = "";
-            this.txtCalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCalle.DisabledState.Parent = this.txtCalle;
-            this.txtCalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCalle.FocusedState.Parent = this.txtCalle;
-            this.txtCalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCalle.HoverState.Parent = this.txtCalle;
-            this.txtCalle.Location = new System.Drawing.Point(423, 104);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(21, 19, 21, 19);
-            this.txtCalle.Name = "txtCalle";
-            this.txtCalle.PasswordChar = '\0';
-            this.txtCalle.PlaceholderText = "Calle";
-            this.txtCalle.SelectedText = "";
-            this.txtCalle.ShadowDecoration.Parent = this.txtCalle;
-            this.txtCalle.Size = new System.Drawing.Size(150, 31);
-            this.txtCalle.TabIndex = 43;
-            // 
-            // txtLocalidad
-            // 
-            this.txtLocalidad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLocalidad.DefaultText = "";
-            this.txtLocalidad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLocalidad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLocalidad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLocalidad.DisabledState.Parent = this.txtLocalidad;
-            this.txtLocalidad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLocalidad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLocalidad.FocusedState.Parent = this.txtLocalidad;
-            this.txtLocalidad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLocalidad.HoverState.Parent = this.txtLocalidad;
-            this.txtLocalidad.Location = new System.Drawing.Point(114, 52);
-            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(48, 41, 48, 41);
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.PasswordChar = '\0';
-            this.txtLocalidad.PlaceholderText = "Clave Localidad";
-            this.txtLocalidad.SelectedText = "";
-            this.txtLocalidad.ShadowDecoration.Parent = this.txtLocalidad;
-            this.txtLocalidad.Size = new System.Drawing.Size(150, 31);
-            this.txtLocalidad.TabIndex = 49;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNumero.DefaultText = "";
-            this.txtNumero.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNumero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNumero.DisabledState.Parent = this.txtNumero;
-            this.txtNumero.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumero.FocusedState.Parent = this.txtNumero;
-            this.txtNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumero.HoverState.Parent = this.txtNumero;
-            this.txtNumero.Location = new System.Drawing.Point(423, 154);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(32, 28, 32, 28);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.PasswordChar = '\0';
-            this.txtNumero.PlaceholderText = "Numero";
-            this.txtNumero.SelectedText = "";
-            this.txtNumero.ShadowDecoration.Parent = this.txtNumero;
-            this.txtNumero.Size = new System.Drawing.Size(150, 31);
-            this.txtNumero.TabIndex = 51;
+            this.lblLocalidad.Text = "Clave Localidad:";
             // 
             // txtMunicipio
             // 
@@ -537,6 +429,42 @@
             this.lblEstado.TabIndex = 45;
             this.lblEstado.Text = "Estado:";
             // 
+            // erpAviso
+            // 
+            this.erpAviso.ContainerControl = this;
+            // 
+            // txtCalle
+            // 
+            this.txtCalle.Location = new System.Drawing.Point(423, 104);
+            this.txtCalle.MaxLength = 30;
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(140, 27);
+            this.txtCalle.TabIndex = 52;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(423, 154);
+            this.txtNumero.MaxLength = 3;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(140, 27);
+            this.txtNumero.TabIndex = 52;
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(281, 52);
+            this.txtLocalidad.MaxLength = 6;
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(140, 27);
+            this.txtLocalidad.TabIndex = 52;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(19, 95);
+            this.txtNombre.MaxLength = 30;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(140, 27);
+            this.txtNombre.TabIndex = 52;
+            // 
             // Vista_Mesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,6 +484,7 @@
             this.pnlMesa.PerformLayout();
             this.pnlDirecion.ResumeLayout(false);
             this.pnlDirecion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -571,20 +500,20 @@
         public Guna.UI2.WinForms.Guna2DataGridView dtgMesa;
         public Guna.UI2.WinForms.Guna2GroupBox pnlMesa;
         public System.Windows.Forms.Label lblNombre;
-        public Guna.UI2.WinForms.Guna2TextBox txtNombre;
         public Guna.UI2.WinForms.Guna2GroupBox pnlDirecion;
         public System.Windows.Forms.Label lblStatus;
         public Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
         public System.Windows.Forms.Label lblCalle;
         public System.Windows.Forms.Label lblNumero;
         public System.Windows.Forms.Label lblLocalidad;
-        public Guna.UI2.WinForms.Guna2TextBox txtLocalidad;
         public Guna.UI2.WinForms.Guna2TextBox txtMunicipio;
-        public Guna.UI2.WinForms.Guna2TextBox txtNumero;
         public Guna.UI2.WinForms.Guna2TextBox txtEstado;
         public System.Windows.Forms.Label lbMunicipio;
         public System.Windows.Forms.Label lblEstado;
-        public Guna.UI2.WinForms.Guna2TextBox txtCalle;
-        public Guna.UI2.WinForms.Guna2Button btnBuscar;
+        public System.Windows.Forms.ErrorProvider erpAviso;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtLocalidad;
+        public System.Windows.Forms.TextBox txtNumero;
+        public System.Windows.Forms.TextBox txtCalle;
     }
 }

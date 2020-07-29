@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPartido = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnImagen = new Guna.UI2.WinForms.Guna2Button();
             this.pbxPartido = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             this.grpOperaciones = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
@@ -43,11 +43,14 @@
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.grpListaCandidatos = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgPartidos = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.erpAviso = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.pnlPartido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPartido)).BeginInit();
             this.grpOperaciones.SuspendLayout();
             this.grpListaCandidatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPartido
@@ -55,10 +58,10 @@
             this.pnlPartido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlPartido.BorderRadius = 5;
             this.pnlPartido.BorderThickness = 2;
+            this.pnlPartido.Controls.Add(this.txtNombre);
             this.pnlPartido.Controls.Add(this.btnImagen);
             this.pnlPartido.Controls.Add(this.pbxPartido);
             this.pnlPartido.Controls.Add(this.lblNombre);
-            this.pnlPartido.Controls.Add(this.txtNombre);
             this.pnlPartido.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlPartido.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.pnlPartido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,29 +112,6 @@
             this.lblNombre.Size = new System.Drawing.Size(127, 18);
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre Partido:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.DefaultText = "";
-            this.txtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.DisabledState.Parent = this.txtNombre;
-            this.txtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.FocusedState.Parent = this.txtNombre;
-            this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(257, 49);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.PlaceholderText = "Nombre";
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
-            this.txtNombre.Size = new System.Drawing.Size(150, 31);
-            this.txtNombre.TabIndex = 3;
             // 
             // grpOperaciones
             // 
@@ -242,30 +222,30 @@
             // 
             // dtgPartidos
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgPartidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtgPartidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgPartidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgPartidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtgPartidos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgPartidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgPartidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPartidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPartidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgPartidos.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgPartidos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgPartidos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgPartidos.EnableHeadersVisualStyles = false;
             this.dtgPartidos.GridColor = System.Drawing.Color.White;
             this.dtgPartidos.Location = new System.Drawing.Point(15, 51);
@@ -298,6 +278,17 @@
             this.dtgPartidos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgPartidos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // erpAviso
+            // 
+            this.erpAviso.ContainerControl = this;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(257, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(140, 27);
+            this.txtNombre.TabIndex = 1;
+            // 
             // Vista_Partidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +306,7 @@
             this.grpOperaciones.ResumeLayout(false);
             this.grpListaCandidatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +316,6 @@
         public Guna.UI2.WinForms.Guna2Button btnImagen;
         public System.Windows.Forms.PictureBox pbxPartido;
         public System.Windows.Forms.Label lblNombre;
-        public Guna.UI2.WinForms.Guna2TextBox txtNombre;
         public Guna.UI2.WinForms.Guna2GroupBox grpOperaciones;
         public Guna.UI2.WinForms.Guna2Button btnLimpiar;
         public Guna.UI2.WinForms.Guna2Button btnEliminar;
@@ -332,5 +323,7 @@
         public Guna.UI2.WinForms.Guna2Button btnGuardar;
         public Guna.UI2.WinForms.Guna2GroupBox grpListaCandidatos;
         public Guna.UI2.WinForms.Guna2DataGridView dtgPartidos;
+        public System.Windows.Forms.ErrorProvider erpAviso;
+        public System.Windows.Forms.TextBox txtNombre;
     }
 }

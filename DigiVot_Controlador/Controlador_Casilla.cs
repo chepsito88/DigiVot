@@ -47,11 +47,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {
-            if (vista_Casilla.txtNombre.Text == "" || vista_Casilla.txtIp.Text=="" || vista_Casilla.txtClaveMesa.Text=="")
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
+            if (valida.Vacios(vista_Casilla, vista_Casilla.erpAviso))
             {
                 vo_Casilla.Nombre = vista_Casilla.txtNombre.Text;
                 vo_Casilla.Ip = vista_Casilla.txtIp.Text;
@@ -73,6 +69,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para la modifiacion de la informacion en la Bds
         private void Click_Modificar(object sender, EventArgs e)
         {
+            vista_Casilla.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Casilla.dtgCasilla))
             {
                 if (valida.revisaSeleccionado(vista_Casilla.dtgCasilla))
@@ -98,6 +95,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para eliminacion de la informacion en la Bds
         private void Click_Eliminar(object sender, EventArgs e)
         {
+            vista_Casilla.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Casilla.dtgCasilla))
             {
                 if (valida.revisaSeleccionado(vista_Casilla.dtgCasilla))
@@ -147,6 +145,7 @@ namespace DigiVot_Controlador
         //Metodo para refresacar los controles
         private void refrescar()
         {
+            vista_Casilla.btnGuardar.Enabled = true;
             checador = true;
             vista_Casilla.txtNombre.Clear();
             vista_Casilla.txtIp.Clear();
@@ -173,6 +172,8 @@ namespace DigiVot_Controlador
         //Metodo que se desencadena tras dar click sobre una fila del datagridview
         private void Click_Fila(object sender, DataGridViewCellEventArgs e)
         {
+            vista_Casilla.erpAviso.Clear();
+            vista_Casilla.btnGuardar.Enabled = false;
             vo_Casilla.idCasilla = int.Parse(vista_Casilla.dtgCasilla.Rows[vista_Casilla.dtgCasilla.CurrentRow.Index].Cells[0].Value.ToString());
             vista_Casilla.txtNombre.Text = vista_Casilla.dtgCasilla.Rows[vista_Casilla.dtgCasilla.CurrentRow.Index].Cells[1].Value.ToString();
             vista_Casilla.txtIp.Text = vista_Casilla.dtgCasilla.Rows[vista_Casilla.dtgCasilla.CurrentRow.Index].Cells[2].Value.ToString();

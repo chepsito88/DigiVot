@@ -41,6 +41,8 @@ namespace DigiVot_Controlador
 
         private void Click_Fila(object sender, DataGridViewCellEventArgs e)
         {
+            vista_Elecciones.erpAviso.Clear();
+            vista_Elecciones.btnGuardar.Enabled = false;
             vo_Elecciones.id_Eleccion= int.Parse(vista_Elecciones.dtgEleciones.Rows[vista_Elecciones.dtgEleciones.CurrentRow.Index].Cells[0].Value.ToString());
             vista_Elecciones.txtNombre.Text = vista_Elecciones.dtgEleciones.Rows[vista_Elecciones.dtgEleciones.CurrentRow.Index].Cells[1].Value.ToString();
             vista_Elecciones.txtDescripcion.Text = vista_Elecciones.dtgEleciones.Rows[vista_Elecciones.dtgEleciones.CurrentRow.Index].Cells[2].Value.ToString();
@@ -50,11 +52,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {            
-            if (vista_Elecciones.txtNombre.Text == "" && vista_Elecciones.txtDescripcion.Text=="")
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
+            if (valida.Vacios(vista_Elecciones, vista_Elecciones.erpAviso))
             {
                 vo_Elecciones.Eleccion = vista_Elecciones.txtNombre.Text;
                 vo_Elecciones.Descripcion = vista_Elecciones.txtDescripcion.Text;
@@ -75,6 +73,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para la modifiacion de la informacion en la Bds
         private void Click_Modificar(object sender, EventArgs e)
         {
+            vista_Elecciones.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Elecciones.dtgEleciones))
             {
                 if (valida.revisaSeleccionado(vista_Elecciones.dtgEleciones))
@@ -99,6 +98,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para eliminacion de la informacion en la Bds
         private void Click_Eliminar(object sender, EventArgs e)
         {
+            vista_Elecciones.erpAviso.Clear();
             if (valida.revisaSeleccionado(vista_Elecciones.dtgEleciones))
             {
                 if (InstanciaElecciones.Eliminar(vo_Elecciones))
@@ -138,6 +138,7 @@ namespace DigiVot_Controlador
 
         private void refrescar()
         {
+            vista_Elecciones.btnGuardar.Enabled = true;
             vista_Elecciones.txtNombre.Clear();
             vista_Elecciones.txtDescripcion.Clear();
             vo_Elecciones = new VO_Tipo_Eleccion();

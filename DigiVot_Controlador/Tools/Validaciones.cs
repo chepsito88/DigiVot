@@ -12,10 +12,10 @@ namespace DigiVot_Controlador
     {
         public bool Buscar(string TextoABuscar, DataGridView grid)
         {
-            foreach (DataGridViewRow fila  in grid.Rows)
-            {                
-                if (fila.Cells[0].Value.ToString()==TextoABuscar)
-                {                    
+            foreach (DataGridViewRow fila in grid.Rows)
+            {
+                if (fila.Cells[0].Value.ToString() == TextoABuscar)
+                {
                     return true;
                 }
             }
@@ -72,6 +72,54 @@ namespace DigiVot_Controlador
             {
                 return true;
             }
-        }        
+        }
+
+
+        public bool Vacios (Form vista,ErrorProvider erp){
+            bool checa = true;
+            erp.Clear();
+            foreach (Control y in vista.Controls)
+            {
+                foreach ( Control x in y.Controls)
+                {
+                    if (x is TextBox &&  x.Text == string.Empty && x.Enabled == true)
+                    {
+                        erp.SetError(x, "Ingrese Valor");
+                        checa = false;
+                    }
+                   
+                    
+
+                    if (x is Guna.UI2.WinForms.Guna2ComboBox)
+                    {
+                        ComboBox z = (ComboBox)x;
+                        if (z.Items.Count == 1)
+                        {
+                            erp.SetError(x, "Seleccione Valor");
+                            checa = false;
+                        }
+                        else if (z.SelectedIndex == 0) {
+                            erp.SetError(x, "Seleccione Valor");
+                            checa = false;
+                        }
+                       
+                    }
+
+                    if (x is PictureBox )
+                    {
+                        PictureBox z = (PictureBox)x;
+                        if (z.Image == null)
+                        {
+                            erp.SetError(x, "Seleccione una imagen");
+                            checa = false;
+                        }
+
+                    }
+                }
+               
+            }
+
+            return checa;
+        }
     }
 }

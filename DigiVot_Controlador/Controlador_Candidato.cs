@@ -122,11 +122,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {
-            if (vista_Candidato.txtCurp.Text == "")
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
+            if (valida.Vacios(vista_Candidato,vista_Candidato.erpAviso))
             {
                 vo_Candidato.Curp = vista_Candidato.txtCurp.Text;
                 vo_Candidato.IdPartido = int.Parse(vista_Candidato.cmbPartidoAsign.SelectedValue.ToString());
@@ -148,6 +144,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para la modifiacion de la informacion en la Bds
         private void Click_Modificar(object sender, EventArgs e)
         {
+            vista_Candidato.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Candidato.dtgListaCandidatos))
             {
                 if (valida.revisaSeleccionado(vista_Candidato.dtgListaCandidatos))
@@ -180,6 +177,7 @@ namespace DigiVot_Controlador
         //Metodo implementado para eliminacion de la informacion en la Bds
         private void Click_Eliminar(object sender, EventArgs e)
         {
+            vista_Candidato.erpAviso.Clear();
             if (valida.revisaContenidoGrid(vista_Candidato.dtgListaCandidatos))
             {
                 if (valida.revisaSeleccionado(vista_Candidato.dtgListaCandidatos))
@@ -228,6 +226,7 @@ namespace DigiVot_Controlador
                 else
                 {
                     MessageBox.Show("No existe registros...", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    vista_Candidato.txtCurp.Clear();
                 }
             }
         }
@@ -350,10 +349,11 @@ namespace DigiVot_Controlador
         private void Click_Doble(object sender, DataGridViewCellEventArgs e)
         {
             checador = true;
+            vista_Candidato.erpAviso.Clear();
             vista_Candidato.cmbEleccionAsign.DataSource = null;
             vista_Candidato.cmbPartidoAsign.DataSource = null;
             vista_Candidato.cmbEleccionAsign.Items.Clear();
-            vista_Candidato.cmbPartidoAsign.Items.Clear();
+            vista_Candidato.cmbPartidoAsign.Items.Clear();            
             vista_Candidato.cmbEleccionAsign.Items.Insert(0, vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[6].Value.ToString());
             vista_Candidato.cmbPartidoAsign.Items.Insert(0, vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[4].Value.ToString());
             vista_Candidato.cmbPartidoAsign.SelectedIndex = 0;

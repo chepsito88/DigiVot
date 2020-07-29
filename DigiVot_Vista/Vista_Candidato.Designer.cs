@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpCandidato = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.lblCurp = new System.Windows.Forms.Label();
-            this.txtCurp = new Guna.UI2.WinForms.Guna2TextBox();
             this.grpDatosCandidato = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnAgregarImagen = new Guna.UI2.WinForms.Guna2Button();
             this.txtApellidoM = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +56,8 @@
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.grpListaCandidatos = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgListaCandidatos = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.erpAviso = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCurp = new System.Windows.Forms.TextBox();
             this.grpCandidato.SuspendLayout();
             this.grpDatosCandidato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenCandidato)).BeginInit();
@@ -63,6 +65,7 @@
             this.grpOperaciones.SuspendLayout();
             this.grpListaCandidatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaCandidatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCandidato
@@ -70,9 +73,9 @@
             this.grpCandidato.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpCandidato.BorderRadius = 5;
             this.grpCandidato.BorderThickness = 2;
+            this.grpCandidato.Controls.Add(this.txtCurp);
             this.grpCandidato.Controls.Add(this.btnBuscar);
             this.grpCandidato.Controls.Add(this.lblCurp);
-            this.grpCandidato.Controls.Add(this.txtCurp);
             this.grpCandidato.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpCandidato.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.grpCandidato.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,30 +116,6 @@
             this.lblCurp.Size = new System.Drawing.Size(48, 18);
             this.lblCurp.TabIndex = 108;
             this.lblCurp.Text = "Curp:";
-            // 
-            // txtCurp
-            // 
-            this.txtCurp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCurp.DefaultText = "";
-            this.txtCurp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCurp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCurp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurp.DisabledState.Parent = this.txtCurp;
-            this.txtCurp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurp.FocusedState.Parent = this.txtCurp;
-            this.txtCurp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurp.HoverState.Parent = this.txtCurp;
-            this.txtCurp.Location = new System.Drawing.Point(21, 91);
-            this.txtCurp.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCurp.MaxLength = 18;
-            this.txtCurp.Name = "txtCurp";
-            this.txtCurp.PasswordChar = '\0';
-            this.txtCurp.PlaceholderText = "Ingrese el Curp";
-            this.txtCurp.SelectedText = "";
-            this.txtCurp.ShadowDecoration.Parent = this.txtCurp;
-            this.txtCurp.Size = new System.Drawing.Size(195, 28);
-            this.txtCurp.TabIndex = 1;
             // 
             // grpDatosCandidato
             // 
@@ -495,30 +474,30 @@
             // 
             this.dtgListaCandidatos.AllowUserToResizeColumns = false;
             this.dtgListaCandidatos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dtgListaCandidatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgListaCandidatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgListaCandidatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtgListaCandidatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgListaCandidatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgListaCandidatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgListaCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgListaCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dtgListaCandidatos.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgListaCandidatos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgListaCandidatos.DefaultCellStyle = dataGridViewCellStyle12;
             this.dtgListaCandidatos.EnableHeadersVisualStyles = false;
             this.dtgListaCandidatos.GridColor = System.Drawing.Color.White;
             this.dtgListaCandidatos.Location = new System.Drawing.Point(16, 66);
@@ -552,6 +531,17 @@
             this.dtgListaCandidatos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgListaCandidatos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // erpAviso
+            // 
+            this.erpAviso.ContainerControl = this;
+            // 
+            // txtCurp
+            // 
+            this.txtCurp.Location = new System.Drawing.Point(21, 91);
+            this.txtCurp.Name = "txtCurp";
+            this.txtCurp.Size = new System.Drawing.Size(195, 27);
+            this.txtCurp.TabIndex = 109;
+            // 
             // Vista_Candidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,6 +565,7 @@
             this.grpOperaciones.ResumeLayout(false);
             this.grpListaCandidatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaCandidatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -598,7 +589,6 @@
         public Guna.UI2.WinForms.Guna2Button btnEditar;
         public Guna.UI2.WinForms.Guna2Button btnGuardar;
         public Guna.UI2.WinForms.Guna2GroupBox grpListaCandidatos;
-        public Guna.UI2.WinForms.Guna2TextBox txtCurp;
         public Guna.UI2.WinForms.Guna2TextBox txtApellidoM;
         public Guna.UI2.WinForms.Guna2TextBox txtApellidoP;
         public Guna.UI2.WinForms.Guna2TextBox txtNombre;
@@ -606,5 +596,7 @@
         public Guna.UI2.WinForms.Guna2DataGridView dtgListaCandidatos;
         public Guna.UI2.WinForms.Guna2Button btnAgregarImagen;
         public System.Windows.Forms.PictureBox ptbImagenCandidato;
+        public System.Windows.Forms.ErrorProvider erpAviso;
+        public System.Windows.Forms.TextBox txtCurp;
     }
 }

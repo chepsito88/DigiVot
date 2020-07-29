@@ -49,12 +49,8 @@ namespace DigiVot_Controlador
         //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {
-            if (vista_Ciudadano.txtNombre.Text == "" || vista_Ciudadano.txtApellido.Text == "" || vista_Ciudadano.txtApellidoM.Text == "" || vista_Ciudadano.txtCurp.Text == "" || vista_Ciudadano.txtEdad.Text == "" || vista_Ciudadano.cmbSexo.SelectedIndex == 0 || vista_Ciudadano.txtFolioINE.Text == "" || vista_Ciudadano.txtVigencia.Text == "" || vista_Ciudadano.txtCalle.Text == "" || vista_Ciudadano.txtNumero.Text == "" || vista_Ciudadano.txtclave.Text == "")
-            {
-                MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
+            if (valida.Vacios(vista_Ciudadano,vista_Ciudadano.erpAviso))
+            {               
                 vo_Ciudadano.Curp = vista_Ciudadano.txtCurp.Text;
                 vo_Ciudadano.Nombre = vista_Ciudadano.txtNombre.Text;
                 vo_Ciudadano.APaterno = vista_Ciudadano.txtApellido.Text;
@@ -252,6 +248,7 @@ namespace DigiVot_Controlador
                 else
                 {
                     MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    vista_Ciudadano.txtclave.Clear();
                     checador = false;
                     reiniciaDireccion();
                 }

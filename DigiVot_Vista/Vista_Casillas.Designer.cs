@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlCasilla = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIp = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCasilla = new System.Windows.Forms.Label();
             this.lblIp = new System.Windows.Forms.Label();
             this.grpOperaciones = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -49,16 +48,20 @@
             this.txtLocalidad = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
-            this.txtClaveMesa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMesa = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMesa = new System.Windows.Forms.Label();
             this.txtMunicipio = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMunicipio = new System.Windows.Forms.Label();
+            this.txtClaveMesa = new System.Windows.Forms.TextBox();
+            this.txtIp = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.erpAviso = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlCasilla.SuspendLayout();
             this.grpOperaciones.SuspendLayout();
             this.pnlListaCasillas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCasilla)).BeginInit();
             this.pnlUbicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCasilla
@@ -81,52 +84,6 @@
             this.pnlCasilla.TabIndex = 46;
             this.pnlCasilla.Text = "Datos Casilla:";
             this.pnlCasilla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.DefaultText = "";
-            this.txtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.DisabledState.Parent = this.txtNombre;
-            this.txtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.FocusedState.Parent = this.txtNombre;
-            this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(20, 77);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(48, 41, 48, 41);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.PlaceholderText = "Nombre Casilla";
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
-            this.txtNombre.Size = new System.Drawing.Size(150, 31);
-            this.txtNombre.TabIndex = 42;
-            // 
-            // txtIp
-            // 
-            this.txtIp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIp.DefaultText = "";
-            this.txtIp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIp.DisabledState.Parent = this.txtIp;
-            this.txtIp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIp.FocusedState.Parent = this.txtIp;
-            this.txtIp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIp.HoverState.Parent = this.txtIp;
-            this.txtIp.Location = new System.Drawing.Point(20, 146);
-            this.txtIp.Margin = new System.Windows.Forms.Padding(72, 60, 72, 60);
-            this.txtIp.Name = "txtIp";
-            this.txtIp.PasswordChar = '\0';
-            this.txtIp.PlaceholderText = "IP Address";
-            this.txtIp.SelectedText = "";
-            this.txtIp.ShadowDecoration.Parent = this.txtIp;
-            this.txtIp.Size = new System.Drawing.Size(150, 31);
-            this.txtIp.TabIndex = 50;
             // 
             // lblCasilla
             // 
@@ -261,30 +218,30 @@
             // 
             // dtgCasilla
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgCasilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtgCasilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgCasilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgCasilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtgCasilla.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgCasilla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgCasilla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCasilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCasilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgCasilla.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCasilla.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCasilla.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgCasilla.EnableHeadersVisualStyles = false;
             this.dtgCasilla.GridColor = System.Drawing.Color.White;
             this.dtgCasilla.Location = new System.Drawing.Point(19, 48);
@@ -323,12 +280,12 @@
             this.pnlUbicacion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlUbicacion.BorderRadius = 5;
             this.pnlUbicacion.BorderThickness = 2;
+            this.pnlUbicacion.Controls.Add(this.txtClaveMesa);
             this.pnlUbicacion.Controls.Add(this.lblClave);
             this.pnlUbicacion.Controls.Add(this.txtEstado);
             this.pnlUbicacion.Controls.Add(this.txtLocalidad);
             this.pnlUbicacion.Controls.Add(this.lblEstado);
             this.pnlUbicacion.Controls.Add(this.lblLocalidad);
-            this.pnlUbicacion.Controls.Add(this.txtClaveMesa);
             this.pnlUbicacion.Controls.Add(this.txtMesa);
             this.pnlUbicacion.Controls.Add(this.lblMesa);
             this.pnlUbicacion.Controls.Add(this.txtMunicipio);
@@ -429,29 +386,6 @@
             this.lblLocalidad.TabIndex = 45;
             this.lblLocalidad.Text = "Localidad:";
             // 
-            // txtClaveMesa
-            // 
-            this.txtClaveMesa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClaveMesa.DefaultText = "";
-            this.txtClaveMesa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtClaveMesa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtClaveMesa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtClaveMesa.DisabledState.Parent = this.txtClaveMesa;
-            this.txtClaveMesa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtClaveMesa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClaveMesa.FocusedState.Parent = this.txtClaveMesa;
-            this.txtClaveMesa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClaveMesa.HoverState.Parent = this.txtClaveMesa;
-            this.txtClaveMesa.Location = new System.Drawing.Point(274, 51);
-            this.txtClaveMesa.Margin = new System.Windows.Forms.Padding(243, 189, 243, 189);
-            this.txtClaveMesa.Name = "txtClaveMesa";
-            this.txtClaveMesa.PasswordChar = '\0';
-            this.txtClaveMesa.PlaceholderText = "Municipio";
-            this.txtClaveMesa.SelectedText = "";
-            this.txtClaveMesa.ShadowDecoration.Parent = this.txtClaveMesa;
-            this.txtClaveMesa.Size = new System.Drawing.Size(150, 31);
-            this.txtClaveMesa.TabIndex = 50;
-            // 
             // txtMesa
             // 
             this.txtMesa.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -524,6 +458,34 @@
             this.lblMunicipio.TabIndex = 45;
             this.lblMunicipio.Text = "Municipio:";
             // 
+            // txtClaveMesa
+            // 
+            this.txtClaveMesa.Location = new System.Drawing.Point(274, 51);
+            this.txtClaveMesa.MaxLength = 3;
+            this.txtClaveMesa.Name = "txtClaveMesa";
+            this.txtClaveMesa.Size = new System.Drawing.Size(140, 27);
+            this.txtClaveMesa.TabIndex = 51;
+            // 
+            // txtIp
+            // 
+            this.txtIp.Location = new System.Drawing.Point(20, 146);
+            this.txtIp.MaxLength = 15;
+            this.txtIp.Name = "txtIp";
+            this.txtIp.Size = new System.Drawing.Size(140, 27);
+            this.txtIp.TabIndex = 51;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(20, 77);
+            this.txtNombre.MaxLength = 30;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(140, 27);
+            this.txtNombre.TabIndex = 51;
+            // 
+            // erpAviso
+            // 
+            this.erpAviso.ContainerControl = this;
+            // 
             // Vista_Casillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,6 +505,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgCasilla)).EndInit();
             this.pnlUbicacion.ResumeLayout(false);
             this.pnlUbicacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,8 +513,6 @@
         #endregion
 
         public Guna.UI2.WinForms.Guna2GroupBox pnlCasilla;
-        public Guna.UI2.WinForms.Guna2TextBox txtNombre;
-        public Guna.UI2.WinForms.Guna2TextBox txtIp;
         public System.Windows.Forms.Label lblCasilla;
         public System.Windows.Forms.Label lblIp;
         public Guna.UI2.WinForms.Guna2GroupBox grpOperaciones;
@@ -571,6 +532,9 @@
         public System.Windows.Forms.Label lblMunicipio;
         public Guna.UI2.WinForms.Guna2TextBox txtMesa;
         public System.Windows.Forms.Label lblMesa;
-        public Guna.UI2.WinForms.Guna2TextBox txtClaveMesa;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtIp;
+        public System.Windows.Forms.TextBox txtClaveMesa;
+        public System.Windows.Forms.ErrorProvider erpAviso;
     }
 }

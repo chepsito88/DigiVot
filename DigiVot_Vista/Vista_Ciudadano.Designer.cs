@@ -28,34 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpDatosPersonalesCiudadano = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cmbSexo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.txtEdad = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblCurp = new System.Windows.Forms.Label();
-            this.txtCurp = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtApellidoM = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblApellidoM = new System.Windows.Forms.Label();
             this.lblApellidoP = new System.Windows.Forms.Label();
-            this.txtApellido = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
             this.grpDatosCredencialElector = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtEstado = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtclave = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.txtMunicipio = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNumero = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLocalidad = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCalle = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCalle = new System.Windows.Forms.Label();
             this.grpOperaciones = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
@@ -65,16 +58,26 @@
             this.grpListaCiudadanos = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgListaCiudadanos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblVigencia = new System.Windows.Forms.Label();
-            this.txtVigencia = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblFolioINE = new System.Windows.Forms.Label();
-            this.txtFolioINE = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtApellidoM = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtCurp = new System.Windows.Forms.TextBox();
+            this.txtVigencia = new System.Windows.Forms.TextBox();
+            this.txtFolioINE = new System.Windows.Forms.TextBox();
+            this.txtclave = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.erpAviso = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpDatosPersonalesCiudadano.SuspendLayout();
             this.grpDatosCredencialElector.SuspendLayout();
             this.grpOperaciones.SuspendLayout();
             this.grpListaCiudadanos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaCiudadanos)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDatosPersonalesCiudadano
@@ -84,16 +87,16 @@
             this.grpDatosPersonalesCiudadano.BorderThickness = 2;
             this.grpDatosPersonalesCiudadano.Controls.Add(this.cmbSexo);
             this.grpDatosPersonalesCiudadano.Controls.Add(this.lblSexo);
-            this.grpDatosPersonalesCiudadano.Controls.Add(this.txtEdad);
-            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblEdad);
-            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblCurp);
             this.grpDatosPersonalesCiudadano.Controls.Add(this.txtCurp);
-            this.grpDatosPersonalesCiudadano.Controls.Add(this.txtApellidoM);
+            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblEdad);
+            this.grpDatosPersonalesCiudadano.Controls.Add(this.txtEdad);
+            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblCurp);
             this.grpDatosPersonalesCiudadano.Controls.Add(this.lblApellidoM);
-            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblApellidoP);
+            this.grpDatosPersonalesCiudadano.Controls.Add(this.txtApellidoM);
             this.grpDatosPersonalesCiudadano.Controls.Add(this.txtApellido);
-            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblNombre);
+            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblApellidoP);
             this.grpDatosPersonalesCiudadano.Controls.Add(this.txtNombre);
+            this.grpDatosPersonalesCiudadano.Controls.Add(this.lblNombre);
             this.grpDatosPersonalesCiudadano.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpDatosPersonalesCiudadano.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.grpDatosPersonalesCiudadano.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,7 +104,7 @@
             this.grpDatosPersonalesCiudadano.Location = new System.Drawing.Point(14, 23);
             this.grpDatosPersonalesCiudadano.Name = "grpDatosPersonalesCiudadano";
             this.grpDatosPersonalesCiudadano.ShadowDecoration.Parent = this.grpDatosPersonalesCiudadano;
-            this.grpDatosPersonalesCiudadano.Size = new System.Drawing.Size(419, 197);
+            this.grpDatosPersonalesCiudadano.Size = new System.Drawing.Size(439, 197);
             this.grpDatosPersonalesCiudadano.TabIndex = 14;
             this.grpDatosPersonalesCiudadano.Text = "Datos personales del Ciudadano";
             this.grpDatosPersonalesCiudadano.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -127,7 +130,7 @@
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.ShadowDecoration.Parent = this.cmbSexo;
             this.cmbSexo.Size = new System.Drawing.Size(140, 36);
-            this.cmbSexo.TabIndex = 21;
+            this.cmbSexo.TabIndex = 6;
             // 
             // lblSexo
             // 
@@ -140,29 +143,6 @@
             this.lblSexo.Size = new System.Drawing.Size(45, 17);
             this.lblSexo.TabIndex = 20;
             this.lblSexo.Text = "Sexo:";
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEdad.DefaultText = "";
-            this.txtEdad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEdad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEdad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEdad.DisabledState.Parent = this.txtEdad;
-            this.txtEdad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEdad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEdad.FocusedState.Parent = this.txtEdad;
-            this.txtEdad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEdad.HoverState.Parent = this.txtEdad;
-            this.txtEdad.Location = new System.Drawing.Point(273, 99);
-            this.txtEdad.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.PasswordChar = '\0';
-            this.txtEdad.PlaceholderText = "Edad";
-            this.txtEdad.SelectedText = "";
-            this.txtEdad.ShadowDecoration.Parent = this.txtEdad;
-            this.txtEdad.Size = new System.Drawing.Size(140, 31);
-            this.txtEdad.TabIndex = 19;
             // 
             // lblEdad
             // 
@@ -188,52 +168,6 @@
             this.lblCurp.TabIndex = 17;
             this.lblCurp.Text = "Curp:";
             // 
-            // txtCurp
-            // 
-            this.txtCurp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCurp.DefaultText = "";
-            this.txtCurp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCurp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCurp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurp.DisabledState.Parent = this.txtCurp;
-            this.txtCurp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurp.FocusedState.Parent = this.txtCurp;
-            this.txtCurp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurp.HoverState.Parent = this.txtCurp;
-            this.txtCurp.Location = new System.Drawing.Point(273, 56);
-            this.txtCurp.Margin = new System.Windows.Forms.Padding(9);
-            this.txtCurp.Name = "txtCurp";
-            this.txtCurp.PasswordChar = '\0';
-            this.txtCurp.PlaceholderText = "Curp";
-            this.txtCurp.SelectedText = "";
-            this.txtCurp.ShadowDecoration.Parent = this.txtCurp;
-            this.txtCurp.Size = new System.Drawing.Size(140, 31);
-            this.txtCurp.TabIndex = 16;
-            // 
-            // txtApellidoM
-            // 
-            this.txtApellidoM.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtApellidoM.DefaultText = "";
-            this.txtApellidoM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtApellidoM.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtApellidoM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtApellidoM.DisabledState.Parent = this.txtApellidoM;
-            this.txtApellidoM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtApellidoM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtApellidoM.FocusedState.Parent = this.txtApellidoM;
-            this.txtApellidoM.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtApellidoM.HoverState.Parent = this.txtApellidoM;
-            this.txtApellidoM.Location = new System.Drawing.Point(77, 147);
-            this.txtApellidoM.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellidoM.Name = "txtApellidoM";
-            this.txtApellidoM.PasswordChar = '\0';
-            this.txtApellidoM.PlaceholderText = "Apellido Materno";
-            this.txtApellidoM.SelectedText = "";
-            this.txtApellidoM.ShadowDecoration.Parent = this.txtApellidoM;
-            this.txtApellidoM.Size = new System.Drawing.Size(140, 31);
-            this.txtApellidoM.TabIndex = 15;
-            // 
             // lblApellidoM
             // 
             this.lblApellidoM.AutoSize = true;
@@ -258,29 +192,6 @@
             this.lblApellidoP.TabIndex = 13;
             this.lblApellidoP.Text = "Paterno:";
             // 
-            // txtApellido
-            // 
-            this.txtApellido.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtApellido.DefaultText = "";
-            this.txtApellido.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtApellido.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtApellido.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtApellido.DisabledState.Parent = this.txtApellido;
-            this.txtApellido.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtApellido.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtApellido.FocusedState.Parent = this.txtApellido;
-            this.txtApellido.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtApellido.HoverState.Parent = this.txtApellido;
-            this.txtApellido.Location = new System.Drawing.Point(77, 100);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(6);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.PasswordChar = '\0';
-            this.txtApellido.PlaceholderText = "Apellido Paterno";
-            this.txtApellido.SelectedText = "";
-            this.txtApellido.ShadowDecoration.Parent = this.txtApellido;
-            this.txtApellido.Size = new System.Drawing.Size(140, 31);
-            this.txtApellido.TabIndex = 12;
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
@@ -293,45 +204,22 @@
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre:";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.DefaultText = "";
-            this.txtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.DisabledState.Parent = this.txtNombre;
-            this.txtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.FocusedState.Parent = this.txtNombre;
-            this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(77, 55);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.PlaceholderText = "Nombre";
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
-            this.txtNombre.Size = new System.Drawing.Size(140, 31);
-            this.txtNombre.TabIndex = 3;
-            // 
             // grpDatosCredencialElector
             // 
             this.grpDatosCredencialElector.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpDatosCredencialElector.BorderRadius = 5;
             this.grpDatosCredencialElector.BorderThickness = 2;
-            this.grpDatosCredencialElector.Controls.Add(this.txtEstado);
             this.grpDatosCredencialElector.Controls.Add(this.txtclave);
+            this.grpDatosCredencialElector.Controls.Add(this.txtNumero);
+            this.grpDatosCredencialElector.Controls.Add(this.txtCalle);
+            this.grpDatosCredencialElector.Controls.Add(this.txtEstado);
             this.grpDatosCredencialElector.Controls.Add(this.label3);
             this.grpDatosCredencialElector.Controls.Add(this.lblLocalidad);
             this.grpDatosCredencialElector.Controls.Add(this.label2);
             this.grpDatosCredencialElector.Controls.Add(this.lblNumero);
             this.grpDatosCredencialElector.Controls.Add(this.txtMunicipio);
-            this.grpDatosCredencialElector.Controls.Add(this.txtNumero);
             this.grpDatosCredencialElector.Controls.Add(this.txtLocalidad);
             this.grpDatosCredencialElector.Controls.Add(this.label1);
-            this.grpDatosCredencialElector.Controls.Add(this.txtCalle);
             this.grpDatosCredencialElector.Controls.Add(this.lblCalle);
             this.grpDatosCredencialElector.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpDatosCredencialElector.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
@@ -368,29 +256,6 @@
             this.txtEstado.ShadowDecoration.Parent = this.txtEstado;
             this.txtEstado.Size = new System.Drawing.Size(140, 31);
             this.txtEstado.TabIndex = 19;
-            // 
-            // txtclave
-            // 
-            this.txtclave.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtclave.DefaultText = "";
-            this.txtclave.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtclave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtclave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtclave.DisabledState.Parent = this.txtclave;
-            this.txtclave.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtclave.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtclave.FocusedState.Parent = this.txtclave;
-            this.txtclave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtclave.HoverState.Parent = this.txtclave;
-            this.txtclave.Location = new System.Drawing.Point(126, 147);
-            this.txtclave.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.txtclave.Name = "txtclave";
-            this.txtclave.PasswordChar = '\0';
-            this.txtclave.PlaceholderText = "Clave Localidad";
-            this.txtclave.SelectedText = "";
-            this.txtclave.ShadowDecoration.Parent = this.txtclave;
-            this.txtclave.Size = new System.Drawing.Size(140, 31);
-            this.txtclave.TabIndex = 19;
             // 
             // label3
             // 
@@ -464,29 +329,6 @@
             this.txtMunicipio.Size = new System.Drawing.Size(140, 31);
             this.txtMunicipio.TabIndex = 16;
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNumero.DefaultText = "";
-            this.txtNumero.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNumero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNumero.DisabledState.Parent = this.txtNumero;
-            this.txtNumero.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumero.FocusedState.Parent = this.txtNumero;
-            this.txtNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumero.HoverState.Parent = this.txtNumero;
-            this.txtNumero.Location = new System.Drawing.Point(93, 99);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(9);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.PasswordChar = '\0';
-            this.txtNumero.PlaceholderText = "Numero";
-            this.txtNumero.SelectedText = "";
-            this.txtNumero.ShadowDecoration.Parent = this.txtNumero;
-            this.txtNumero.Size = new System.Drawing.Size(140, 31);
-            this.txtNumero.TabIndex = 16;
-            // 
             // txtLocalidad
             // 
             this.txtLocalidad.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -522,29 +364,6 @@
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Localidad:";
-            // 
-            // txtCalle
-            // 
-            this.txtCalle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCalle.DefaultText = "";
-            this.txtCalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCalle.DisabledState.Parent = this.txtCalle;
-            this.txtCalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCalle.FocusedState.Parent = this.txtCalle;
-            this.txtCalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCalle.HoverState.Parent = this.txtCalle;
-            this.txtCalle.Location = new System.Drawing.Point(91, 56);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCalle.Name = "txtCalle";
-            this.txtCalle.PasswordChar = '\0';
-            this.txtCalle.PlaceholderText = "Calle";
-            this.txtCalle.SelectedText = "";
-            this.txtCalle.ShadowDecoration.Parent = this.txtCalle;
-            this.txtCalle.Size = new System.Drawing.Size(140, 31);
-            this.txtCalle.TabIndex = 15;
             // 
             // lblCalle
             // 
@@ -628,7 +447,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
             this.btnEditar.Size = new System.Drawing.Size(92, 40);
-            this.btnEditar.TabIndex = 1;
+            this.btnEditar.TabIndex = 50;
             this.btnEditar.Text = "Modificar";
             // 
             // btnGuardar
@@ -668,30 +487,30 @@
             // 
             // dtgListaCiudadanos
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgListaCiudadanos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtgListaCiudadanos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgListaCiudadanos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgListaCiudadanos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dtgListaCiudadanos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgListaCiudadanos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgListaCiudadanos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgListaCiudadanos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgListaCiudadanos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgListaCiudadanos.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgListaCiudadanos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgListaCiudadanos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgListaCiudadanos.EnableHeadersVisualStyles = false;
             this.dtgListaCiudadanos.GridColor = System.Drawing.Color.White;
             this.dtgListaCiudadanos.Location = new System.Drawing.Point(16, 66);
@@ -730,34 +549,11 @@
             this.lblVigencia.BackColor = System.Drawing.Color.Transparent;
             this.lblVigencia.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVigencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblVigencia.Location = new System.Drawing.Point(73, 134);
+            this.lblVigencia.Location = new System.Drawing.Point(64, 134);
             this.lblVigencia.Name = "lblVigencia";
             this.lblVigencia.Size = new System.Drawing.Size(74, 17);
             this.lblVigencia.TabIndex = 17;
             this.lblVigencia.Text = "Vigencia:";
-            // 
-            // txtVigencia
-            // 
-            this.txtVigencia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtVigencia.DefaultText = "";
-            this.txtVigencia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtVigencia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtVigencia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtVigencia.DisabledState.Parent = this.txtVigencia;
-            this.txtVigencia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtVigencia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtVigencia.FocusedState.Parent = this.txtVigencia;
-            this.txtVigencia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtVigencia.HoverState.Parent = this.txtVigencia;
-            this.txtVigencia.Location = new System.Drawing.Point(40, 154);
-            this.txtVigencia.Margin = new System.Windows.Forms.Padding(9);
-            this.txtVigencia.Name = "txtVigencia";
-            this.txtVigencia.PasswordChar = '\0';
-            this.txtVigencia.PlaceholderText = "Vigencia";
-            this.txtVigencia.SelectedText = "";
-            this.txtVigencia.ShadowDecoration.Parent = this.txtVigencia;
-            this.txtVigencia.Size = new System.Drawing.Size(140, 31);
-            this.txtVigencia.TabIndex = 16;
             // 
             // lblFolioINE
             // 
@@ -765,55 +561,116 @@
             this.lblFolioINE.BackColor = System.Drawing.Color.Transparent;
             this.lblFolioINE.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFolioINE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblFolioINE.Location = new System.Drawing.Point(75, 59);
+            this.lblFolioINE.Location = new System.Drawing.Point(66, 59);
             this.lblFolioINE.Name = "lblFolioINE";
             this.lblFolioINE.Size = new System.Drawing.Size(70, 17);
             this.lblFolioINE.TabIndex = 15;
             this.lblFolioINE.Text = "Folio INE:";
-            // 
-            // txtFolioINE
-            // 
-            this.txtFolioINE.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFolioINE.DefaultText = "";
-            this.txtFolioINE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFolioINE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFolioINE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFolioINE.DisabledState.Parent = this.txtFolioINE;
-            this.txtFolioINE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFolioINE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFolioINE.FocusedState.Parent = this.txtFolioINE;
-            this.txtFolioINE.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFolioINE.HoverState.Parent = this.txtFolioINE;
-            this.txtFolioINE.Location = new System.Drawing.Point(40, 79);
-            this.txtFolioINE.Margin = new System.Windows.Forms.Padding(9);
-            this.txtFolioINE.Name = "txtFolioINE";
-            this.txtFolioINE.PasswordChar = '\0';
-            this.txtFolioINE.PlaceholderText = "Folio INE";
-            this.txtFolioINE.SelectedText = "";
-            this.txtFolioINE.ShadowDecoration.Parent = this.txtFolioINE;
-            this.txtFolioINE.Size = new System.Drawing.Size(140, 31);
-            this.txtFolioINE.TabIndex = 14;
             // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.BorderRadius = 5;
             this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.txtFolioINE);
             this.guna2GroupBox1.Controls.Add(this.txtVigencia);
             this.guna2GroupBox1.Controls.Add(this.lblVigencia);
-            this.guna2GroupBox1.Controls.Add(this.txtFolioINE);
             this.guna2GroupBox1.Controls.Add(this.lblFolioINE);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(440, 23);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(459, 23);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(203, 197);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(184, 197);
             this.guna2GroupBox1.TabIndex = 20;
             this.guna2GroupBox1.Text = "Datos INE";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(77, 55);
+            this.txtNombre.MaxLength = 30;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(140, 27);
+            this.txtNombre.TabIndex = 1;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(77, 100);
+            this.txtApellido.MaxLength = 30;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(140, 27);
+            this.txtApellido.TabIndex = 2;
+            // 
+            // txtApellidoM
+            // 
+            this.txtApellidoM.Location = new System.Drawing.Point(77, 147);
+            this.txtApellidoM.MaxLength = 30;
+            this.txtApellidoM.Name = "txtApellidoM";
+            this.txtApellidoM.Size = new System.Drawing.Size(140, 27);
+            this.txtApellidoM.TabIndex = 3;
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Location = new System.Drawing.Point(273, 99);
+            this.txtEdad.MaxLength = 3;
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(140, 27);
+            this.txtEdad.TabIndex = 5;
+            // 
+            // txtCurp
+            // 
+            this.txtCurp.Location = new System.Drawing.Point(273, 56);
+            this.txtCurp.MaxLength = 18;
+            this.txtCurp.Name = "txtCurp";
+            this.txtCurp.Size = new System.Drawing.Size(140, 27);
+            this.txtCurp.TabIndex = 4;
+            // 
+            // txtVigencia
+            // 
+            this.txtVigencia.Location = new System.Drawing.Point(31, 154);
+            this.txtVigencia.MaxLength = 4;
+            this.txtVigencia.Name = "txtVigencia";
+            this.txtVigencia.Size = new System.Drawing.Size(140, 27);
+            this.txtVigencia.TabIndex = 8;
+            // 
+            // txtFolioINE
+            // 
+            this.txtFolioINE.Location = new System.Drawing.Point(31, 79);
+            this.txtFolioINE.MaxLength = 30;
+            this.txtFolioINE.Name = "txtFolioINE";
+            this.txtFolioINE.Size = new System.Drawing.Size(140, 27);
+            this.txtFolioINE.TabIndex = 7;
+            // 
+            // txtclave
+            // 
+            this.txtclave.Location = new System.Drawing.Point(126, 147);
+            this.txtclave.MaxLength = 6;
+            this.txtclave.Name = "txtclave";
+            this.txtclave.Size = new System.Drawing.Size(140, 27);
+            this.txtclave.TabIndex = 11;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(93, 99);
+            this.txtNumero.MaxLength = 3;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(140, 27);
+            this.txtNumero.TabIndex = 10;
+            // 
+            // txtCalle
+            // 
+            this.txtCalle.Location = new System.Drawing.Point(93, 56);
+            this.txtCalle.MaxLength = 30;
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(140, 27);
+            this.txtCalle.TabIndex = 9;
+            // 
+            // erpAviso
+            // 
+            this.erpAviso.ContainerControl = this;
             // 
             // Vista_Ciudadano
             // 
@@ -837,6 +694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaCiudadanos)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpAviso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -867,19 +725,20 @@
         public System.Windows.Forms.Label lblFolioINE;
         public Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         public Guna.UI2.WinForms.Guna2ComboBox cmbSexo;
-        public Guna.UI2.WinForms.Guna2TextBox txtEdad;
-        public Guna.UI2.WinForms.Guna2TextBox txtCurp;
-        public Guna.UI2.WinForms.Guna2TextBox txtApellidoM;
-        public Guna.UI2.WinForms.Guna2TextBox txtApellido;
-        public Guna.UI2.WinForms.Guna2TextBox txtNombre;
-        public Guna.UI2.WinForms.Guna2TextBox txtclave;
-        public Guna.UI2.WinForms.Guna2TextBox txtNumero;
-        public Guna.UI2.WinForms.Guna2TextBox txtCalle;
         public Guna.UI2.WinForms.Guna2TextBox txtEstado;
         public Guna.UI2.WinForms.Guna2TextBox txtMunicipio;
         public Guna.UI2.WinForms.Guna2TextBox txtLocalidad;
-        public Guna.UI2.WinForms.Guna2TextBox txtVigencia;
-        public Guna.UI2.WinForms.Guna2TextBox txtFolioINE;
         public Guna.UI2.WinForms.Guna2DataGridView dtgListaCiudadanos;
+        public System.Windows.Forms.TextBox txtCurp;
+        public System.Windows.Forms.TextBox txtEdad;
+        public System.Windows.Forms.TextBox txtApellidoM;
+        public System.Windows.Forms.TextBox txtApellido;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtclave;
+        public System.Windows.Forms.TextBox txtNumero;
+        public System.Windows.Forms.TextBox txtCalle;
+        public System.Windows.Forms.TextBox txtFolioINE;
+        public System.Windows.Forms.TextBox txtVigencia;
+        public System.Windows.Forms.ErrorProvider erpAviso;
     }
 }
