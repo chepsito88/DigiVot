@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vista_Principal));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnMinimizar = new FontAwesome.Sharp.IconPictureBox();
             this.btnSalirApp = new FontAwesome.Sharp.IconPictureBox();
+            this.lblNomUsuario = new System.Windows.Forms.Label();
             this.pnlContMenuLateral = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconPictureBox();
             this.pnlContBotones = new System.Windows.Forms.FlowLayoutPanel();
@@ -67,9 +68,8 @@
             this.btnSoporteTecnico = new Guna.UI2.WinForms.Guna2Button();
             this.btnVerlaAyuda = new Guna.UI2.WinForms.Guna2Button();
             this.btnAyuda = new Guna.UI2.WinForms.Guna2Button();
-            this.lblNomUsuario = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
-            this.ptbFotoUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.ptbFoto = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnlContenedorFormularios = new System.Windows.Forms.Panel();
             this.tmrColapzarAltas = new System.Windows.Forms.Timer(this.components);
             this.tmrColapzarReportes = new System.Windows.Forms.Timer(this.components);
@@ -77,6 +77,7 @@
             this.tmrColapzarConfiguraciones = new System.Windows.Forms.Timer(this.components);
             this.tmrColapzarAyuda = new System.Windows.Forms.Timer(this.components);
             this.AnimacionMenuLateral = new Guna.UI2.WinForms.Guna2Transition();
+            this.btnReporteNacional = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalirApp)).BeginInit();
@@ -88,7 +89,7 @@
             this.pnlAsignaciones.SuspendLayout();
             this.pnlConfiguracion.SuspendLayout();
             this.pnlAyuda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFotoUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSuperior
@@ -96,6 +97,7 @@
             this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(220)))));
             this.pnlSuperior.Controls.Add(this.btnMinimizar);
             this.pnlSuperior.Controls.Add(this.btnSalirApp);
+            this.pnlSuperior.Controls.Add(this.lblNomUsuario);
             this.AnimacionMenuLateral.SetDecoration(this.pnlSuperior, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
@@ -131,14 +133,25 @@
             this.btnSalirApp.TabIndex = 0;
             this.btnSalirApp.TabStop = false;
             // 
+            // lblNomUsuario
+            // 
+            this.lblNomUsuario.AutoSize = true;
+            this.AnimacionMenuLateral.SetDecoration(this.lblNomUsuario, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblNomUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNomUsuario.Location = new System.Drawing.Point(41, 7);
+            this.lblNomUsuario.Name = "lblNomUsuario";
+            this.lblNomUsuario.Size = new System.Drawing.Size(86, 25);
+            this.lblNomUsuario.TabIndex = 1;
+            this.lblNomUsuario.Text = "Nombre";
+            // 
             // pnlContMenuLateral
             // 
             this.pnlContMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.pnlContMenuLateral.Controls.Add(this.btnMenu);
             this.pnlContMenuLateral.Controls.Add(this.pnlContBotones);
-            this.pnlContMenuLateral.Controls.Add(this.lblNomUsuario);
             this.pnlContMenuLateral.Controls.Add(this.btnCerrarSesion);
-            this.pnlContMenuLateral.Controls.Add(this.ptbFotoUser);
+            this.pnlContMenuLateral.Controls.Add(this.ptbFoto);
             this.AnimacionMenuLateral.SetDecoration(this.pnlContMenuLateral, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnlContMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlContMenuLateral.Location = new System.Drawing.Point(0, 37);
@@ -410,6 +423,7 @@
             // pnlReportes
             // 
             this.pnlReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(220)))));
+            this.pnlReportes.Controls.Add(this.btnReporteNacional);
             this.pnlReportes.Controls.Add(this.btnLocal);
             this.pnlReportes.Controls.Add(this.btnEstatal);
             this.pnlReportes.Controls.Add(this.btnNacional);
@@ -843,18 +857,6 @@
             this.btnAyuda.Text = "  Ayuda";
             this.btnAyuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // lblNomUsuario
-            // 
-            this.lblNomUsuario.AutoSize = true;
-            this.AnimacionMenuLateral.SetDecoration(this.lblNomUsuario, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblNomUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNomUsuario.Location = new System.Drawing.Point(52, 162);
-            this.lblNomUsuario.Name = "lblNomUsuario";
-            this.lblNomUsuario.Size = new System.Drawing.Size(60, 16);
-            this.lblNomUsuario.TabIndex = 1;
-            this.lblNomUsuario.Text = "Nombre";
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Animated = true;
@@ -880,18 +882,17 @@
             this.btnCerrarSesion.Text = "  Cerra Sesión";
             this.btnCerrarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // ptbFotoUser
+            // ptbFoto
             // 
-            this.AnimacionMenuLateral.SetDecoration(this.ptbFotoUser, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.ptbFotoUser.Image = ((System.Drawing.Image)(resources.GetObject("ptbFotoUser.Image")));
-            this.ptbFotoUser.Location = new System.Drawing.Point(50, 40);
-            this.ptbFotoUser.Name = "ptbFotoUser";
-            this.ptbFotoUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ptbFotoUser.ShadowDecoration.Parent = this.ptbFotoUser;
-            this.ptbFotoUser.Size = new System.Drawing.Size(111, 106);
-            this.ptbFotoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFotoUser.TabIndex = 0;
-            this.ptbFotoUser.TabStop = false;
+            this.AnimacionMenuLateral.SetDecoration(this.ptbFoto, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ptbFoto.Location = new System.Drawing.Point(12, 40);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ptbFoto.ShadowDecoration.Parent = this.ptbFoto;
+            this.ptbFoto.Size = new System.Drawing.Size(167, 156);
+            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFoto.TabIndex = 0;
+            this.ptbFoto.TabStop = false;
             // 
             // pnlContenedorFormularios
             // 
@@ -927,22 +928,45 @@
             // 
             this.AnimacionMenuLateral.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.AnimacionMenuLateral.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.AnimacionMenuLateral.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.AnimacionMenuLateral.DefaultAnimation = animation1;
+            // 
+            // btnReporteNacional
+            // 
+            this.btnReporteNacional.Animated = true;
+            this.btnReporteNacional.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnReporteNacional.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(122)))), ((int)(((byte)(220)))));
+            this.btnReporteNacional.CheckedState.Parent = this.btnReporteNacional;
+            this.btnReporteNacional.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporteNacional.CustomImages.Parent = this.btnReporteNacional;
+            this.AnimacionMenuLateral.SetDecoration(this.btnReporteNacional, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnReporteNacional.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(255)))));
+            this.btnReporteNacional.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnReporteNacional.ForeColor = System.Drawing.Color.White;
+            this.btnReporteNacional.HoverState.Parent = this.btnReporteNacional;
+            this.btnReporteNacional.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReporteNacional.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnReporteNacional.Location = new System.Drawing.Point(12, 40);
+            this.btnReporteNacional.Name = "btnReporteNacional";
+            this.btnReporteNacional.ShadowDecoration.Parent = this.btnReporteNacional;
+            this.btnReporteNacional.Size = new System.Drawing.Size(156, 35);
+            this.btnReporteNacional.TabIndex = 8;
+            this.btnReporteNacional.Text = "Nacionales";
+            this.btnReporteNacional.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Vista_Principal
             // 
@@ -958,10 +982,10 @@
             this.Text = "Vista_Principa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlSuperior.ResumeLayout(false);
+            this.pnlSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalirApp)).EndInit();
             this.pnlContMenuLateral.ResumeLayout(false);
-            this.pnlContMenuLateral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.pnlContBotones.ResumeLayout(false);
             this.pnlAltas.ResumeLayout(false);
@@ -969,7 +993,7 @@
             this.pnlAsignaciones.ResumeLayout(false);
             this.pnlConfiguracion.ResumeLayout(false);
             this.pnlAyuda.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFotoUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1002,7 +1026,7 @@
         public Guna.UI2.WinForms.Guna2Button btnReportes;
         public System.Windows.Forms.Label lblNomUsuario;
         public Guna.UI2.WinForms.Guna2Button btnCerrarSesion;
-        public Guna.UI2.WinForms.Guna2CirclePictureBox ptbFotoUser;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox ptbFoto;
         public System.Windows.Forms.Panel pnlContenedorFormularios;
         public System.Windows.Forms.Panel pnlConfiguracion;
         public Guna.UI2.WinForms.Guna2Button btnUsuarios;
@@ -1022,5 +1046,6 @@
         public System.Windows.Forms.Timer tmrColapzarConfiguraciones;
         public System.Windows.Forms.Timer tmrColapzarAyuda;
         public Guna.UI2.WinForms.Guna2Transition AnimacionMenuLateral;
+        public Guna.UI2.WinForms.Guna2Button btnReporteNacional;
     }
 }

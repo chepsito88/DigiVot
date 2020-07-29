@@ -99,7 +99,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
             this.btnBuscar.Size = new System.Drawing.Size(92, 40);
-            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             // 
             // lblCurp
@@ -111,7 +111,7 @@
             this.lblCurp.Location = new System.Drawing.Point(94, 70);
             this.lblCurp.Name = "lblCurp";
             this.lblCurp.Size = new System.Drawing.Size(48, 18);
-            this.lblCurp.TabIndex = 4;
+            this.lblCurp.TabIndex = 108;
             this.lblCurp.Text = "Curp:";
             // 
             // txtCurp
@@ -129,13 +129,14 @@
             this.txtCurp.HoverState.Parent = this.txtCurp;
             this.txtCurp.Location = new System.Drawing.Point(21, 91);
             this.txtCurp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCurp.MaxLength = 18;
             this.txtCurp.Name = "txtCurp";
             this.txtCurp.PasswordChar = '\0';
             this.txtCurp.PlaceholderText = "Ingrese el Curp";
             this.txtCurp.SelectedText = "";
             this.txtCurp.ShadowDecoration.Parent = this.txtCurp;
             this.txtCurp.Size = new System.Drawing.Size(195, 28);
-            this.txtCurp.TabIndex = 3;
+            this.txtCurp.TabIndex = 1;
             // 
             // grpDatosCandidato
             // 
@@ -176,7 +177,7 @@
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.ShadowDecoration.Parent = this.btnAgregarImagen;
             this.btnAgregarImagen.Size = new System.Drawing.Size(164, 40);
-            this.btnAgregarImagen.TabIndex = 22;
+            this.btnAgregarImagen.TabIndex = 3;
             this.btnAgregarImagen.Text = "Agregar Imagen";
             this.btnAgregarImagen.UseTransparentBackground = true;
             // 
@@ -202,7 +203,7 @@
             this.txtApellidoM.SelectedText = "";
             this.txtApellidoM.ShadowDecoration.Parent = this.txtApellidoM;
             this.txtApellidoM.Size = new System.Drawing.Size(150, 29);
-            this.txtApellidoM.TabIndex = 15;
+            this.txtApellidoM.TabIndex = 102;
             // 
             // ptbImagenCandidato
             // 
@@ -222,7 +223,7 @@
             this.lblApellidoM.Location = new System.Drawing.Point(2, 163);
             this.lblApellidoM.Name = "lblApellidoM";
             this.lblApellidoM.Size = new System.Drawing.Size(141, 18);
-            this.lblApellidoM.TabIndex = 14;
+            this.lblApellidoM.TabIndex = 107;
             this.lblApellidoM.Text = "Apellido Materno:";
             // 
             // lblApellidoP
@@ -234,7 +235,7 @@
             this.lblApellidoP.Location = new System.Drawing.Point(5, 117);
             this.lblApellidoP.Name = "lblApellidoP";
             this.lblApellidoP.Size = new System.Drawing.Size(135, 18);
-            this.lblApellidoP.TabIndex = 13;
+            this.lblApellidoP.TabIndex = 106;
             this.lblApellidoP.Text = "Apellido Paterno:";
             // 
             // txtApellidoP
@@ -259,7 +260,7 @@
             this.txtApellidoP.SelectedText = "";
             this.txtApellidoP.ShadowDecoration.Parent = this.txtApellidoP;
             this.txtApellidoP.Size = new System.Drawing.Size(150, 31);
-            this.txtApellidoP.TabIndex = 12;
+            this.txtApellidoP.TabIndex = 101;
             // 
             // lblNombre
             // 
@@ -270,7 +271,7 @@
             this.lblNombre.Location = new System.Drawing.Point(65, 72);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(72, 18);
-            this.lblNombre.TabIndex = 4;
+            this.lblNombre.TabIndex = 105;
             this.lblNombre.Text = "Nombre:";
             // 
             // txtNombre
@@ -295,7 +296,7 @@
             this.txtNombre.SelectedText = "";
             this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
             this.txtNombre.Size = new System.Drawing.Size(150, 31);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 100;
             // 
             // grpCargosCandidato
             // 
@@ -336,7 +337,7 @@
             this.cmbPartidoAsign.Name = "cmbPartidoAsign";
             this.cmbPartidoAsign.ShadowDecoration.Parent = this.cmbPartidoAsign;
             this.cmbPartidoAsign.Size = new System.Drawing.Size(140, 36);
-            this.cmbPartidoAsign.TabIndex = 20;
+            this.cmbPartidoAsign.TabIndex = 4;
             // 
             // cmbEleccionAsign
             // 
@@ -355,7 +356,7 @@
             this.cmbEleccionAsign.Name = "cmbEleccionAsign";
             this.cmbEleccionAsign.ShadowDecoration.Parent = this.cmbEleccionAsign;
             this.cmbEleccionAsign.Size = new System.Drawing.Size(140, 36);
-            this.cmbEleccionAsign.TabIndex = 17;
+            this.cmbEleccionAsign.TabIndex = 5;
             this.cmbEleccionAsign.Tag = "";
             // 
             // lblEleccionAsign
@@ -367,7 +368,7 @@
             this.lblEleccionAsign.Location = new System.Drawing.Point(66, 147);
             this.lblEleccionAsign.Name = "lblEleccionAsign";
             this.lblEleccionAsign.Size = new System.Drawing.Size(77, 18);
-            this.lblEleccionAsign.TabIndex = 16;
+            this.lblEleccionAsign.TabIndex = 202;
             this.lblEleccionAsign.Text = "Elección:";
             // 
             // lblPartidoAsign
@@ -379,7 +380,7 @@
             this.lblPartidoAsign.Location = new System.Drawing.Point(71, 68);
             this.lblPartidoAsign.Name = "lblPartidoAsign";
             this.lblPartidoAsign.Size = new System.Drawing.Size(67, 18);
-            this.lblPartidoAsign.TabIndex = 14;
+            this.lblPartidoAsign.TabIndex = 200;
             this.lblPartidoAsign.Text = "Partido: ";
             // 
             // grpOperaciones
@@ -492,6 +493,8 @@
             // 
             // dtgListaCandidatos
             // 
+            this.dtgListaCandidatos.AllowUserToResizeColumns = false;
+            this.dtgListaCandidatos.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgListaCandidatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgListaCandidatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -521,6 +524,7 @@
             this.dtgListaCandidatos.Location = new System.Drawing.Point(16, 66);
             this.dtgListaCandidatos.MultiSelect = false;
             this.dtgListaCandidatos.Name = "dtgListaCandidatos";
+            this.dtgListaCandidatos.ReadOnly = true;
             this.dtgListaCandidatos.RowHeadersVisible = false;
             this.dtgListaCandidatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgListaCandidatos.Size = new System.Drawing.Size(702, 232);
@@ -539,7 +543,7 @@
             this.dtgListaCandidatos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dtgListaCandidatos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgListaCandidatos.ThemeStyle.HeaderStyle.Height = 30;
-            this.dtgListaCandidatos.ThemeStyle.ReadOnly = false;
+            this.dtgListaCandidatos.ThemeStyle.ReadOnly = true;
             this.dtgListaCandidatos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.dtgListaCandidatos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgListaCandidatos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -15,6 +15,7 @@ namespace DigiVot_Controlador
     public class Controlador_Login
     {
         Vista_Login Vista;
+        VO_User voUser;
         private ICrud Instancia = Construye_Objeto.intancias(4);
 
         public Controlador_Login(Vista_Login Vista)
@@ -75,17 +76,29 @@ namespace DigiVot_Controlador
 
         private void Login()
         {
-            VO_User voUser = new VO_User();
+            voUser = new VO_User();
             voUser.Nombre = Vista.txtUsuario.Text;
             voUser.password = Vista.txtContrasena.Text;
             List<Object> lstLogin = Instancia.Listar(voUser);
             if ((Boolean)lstLogin[0])
             {
-                Vista_Principal vPrincipal = new Vista_Principal();
-                Controlador_Principal cPrincipal = new Controlador_Principal(vPrincipal, (VO_User)lstLogin[1]);
-                vPrincipal.WindowState = FormWindowState.Maximized;
-                vPrincipal.Show();
-                Vista.Close();
+                voUser=(VO_User)lstLogin[1];
+                if (voUser.modificador == 1)
+                {
+                    Vista_Password vista_Password = new Vista_Password();
+                    Controlador_Password con_Password = new Controlador_Password(vista_Password, (VO_User)lstLogin[1]);
+                    vista_Password.StartPosition=FormStartPosition.CenterScreen;
+                    vista_Password.Show();
+                    Vista.Close();
+                }
+                else {
+                    Vista_Principal vPrincipal = new Vista_Principal();
+                    Controlador_Principal cPrincipal = new Controlador_Principal(vPrincipal, (VO_User)lstLogin[1]);
+                    vPrincipal.WindowState = FormWindowState.Maximized;
+                    vPrincipal.Show();
+                    Vista.Close();
+                }
+                
             }
             else
             {

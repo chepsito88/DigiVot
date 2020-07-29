@@ -10,16 +10,25 @@ namespace DigiVot_Controlador
 {
     class Controlador_Candidato
     {
-        Vista_Candidato vista_Candidato;
-        VO_Candidato vo_Candidato;
-        VO_Ciudadano vo_Ciudadano;
-        VO_Partidos vo_Partidos;
+        #region Zona de Instancias VO, instancias abstract y variables Globales
+        private Vista_Candidato vista_Candidato;
+        private VO_Candidato vo_Candidato;
+        private VO_Ciudadano vo_Ciudadano;
+        private VO_Partidos vo_Partidos;
         private ICrud InstanciaPartidos = Construye_Objeto.intancias(6);
         private ICrud InstanciaCandidatos = Construye_Objeto.intancias(5);
         private ICrud InstanciaCiudadanos = Construye_Objeto.intancias(7);
         private ICrud InstanciaElecciones = Construye_Objeto.intancias(8);
-        OpenFileDialog abrir;
+        private OpenFileDialog abrir;
         private Validaciones valida;
+        private TypeAssistant assistant;
+        private Boolean checador = false;
+
+        #endregion
+
+
+        #region Constructor de Controlador 
+
         public Controlador_Candidato(Vista_Candidato vista_Candidato, VO_Candidato vo_Candidato, VO_Partidos vo_Partidos, VO_Ciudadano vo_Ciudadano)
         {
             this.vista_Candidato = vista_Candidato;
@@ -27,6 +36,8 @@ namespace DigiVot_Controlador
             this.vo_Partidos = vo_Partidos;
             this.vo_Ciudadano = vo_Ciudadano;
             valida = new Validaciones();
+            assistant = new TypeAssistant();
+            assistant.Idled += Temporizador;
             cargaInicial();
             Eventos_Botones();
             llenaGrid();
@@ -34,10 +45,8 @@ namespace DigiVot_Controlador
 
         }
 
-        private void Limpiar(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            vista_Candidato.dtgListaCandidatos.ClearSelection();
-        }
+        #endregion
+
 
         private void Eventos_Botones()
         {
@@ -50,7 +59,44 @@ namespace DigiVot_Controlador
             vista_Candidato.cmbPartidoAsign.Click += Click_ComboPartido;
             vista_Candidato.cmbEleccionAsign.Click += Click_ComboElecciones;
             vista_Candidato.dtgListaCandidatos.CellClick += Click_Doble;
+            vista_Candidato.txtCurp.TextChanged += Cambio;
 
+        }
+
+
+        private void Temporizador(object sender, EventArgs e)
+        {
+            vista_Candidato.Invoke(
+           new MethodInvoker(() =>
+           {
+               if (!checador)
+               {
+                   Buscar();
+               }
+               checador = false;
+
+           }));
+        }
+
+        private void Buscar()
+        {
+            if (valida.Buscar(vista_Candidato.txtCurp.Text, vista_Candidato.dtgListaCandidatos))
+            {
+                MessageBox.Show("Curp registrada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                vista_Candidato.txtCurp.Clear();
+                checador = false;                
+            }
+        }
+
+        private void Limpiar(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            vista_Candidato.dtgListaCandidatos.ClearSelection();
+        }
+
+       
+        private void Cambio(object sender, EventArgs e)
+        {
+            assistant.TextChanged();
         }
 
         private void Click_ComboElecciones(object sender, EventArgs e)
@@ -63,93 +109,20 @@ namespace DigiVot_Controlador
             CargarPartidos();
         }
 
-        private void Click_Doble(object sender, DataGridViewCellEventArgs e)
-        {
-            vista_Candidato.cmbEleccionAsign.DataSource = null;
-            vista_Candidato.cmbPartidoAsign.DataSource = null;
-            vista_Candidato.cmbEleccionAsign.Items.Clear();
-            vista_Candidato.cmbPartidoAsign.Items.Clear();
-            vista_Candidato.cmbEleccionAsign.Items.Insert(0, vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[6].Value.ToString());
-            vista_Candidato.cmbPartidoAsign.Items.Insert(0, vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[4].Value.ToString());
-            vista_Candidato.cmbPartidoAsign.SelectedIndex = 0;
-            vista_Candidato.cmbEleccionAsign.SelectedIndex = 0;
-            vista_Candidato.txtCurp.Enabled = false;
-            vista_Candidato.btnBuscar.Enabled = false;
-            vista_Candidato.btnGuardar.Enabled = false;
-            vista_Candidato.txtCurp.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[0].Value.ToString();
-            vista_Candidato.txtNombre.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[1].Value.ToString();
-            vista_Candidato.txtApellidoP.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[2].Value.ToString();
-            vista_Candidato.txtApellidoM.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[3].Value.ToString();
-            vista_Candidato.cmbPartidoAsign.SelectedValue = int.Parse(vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[5].Value.ToString());
-            byte[]datos=(byte[]) vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[8].Value;
-            MemoryStream ms = new MemoryStream(datos);
-            vista_Candidato.ptbImagenCandidato.Image = Bitmap.FromStream(ms);            
-        }
+     
 
-        private void Click_Modificar(object sender, EventArgs e)
-        {
-            if (valida.revisaContenidoGrid(vista_Candidato.dtgListaCandidatos))
-            {
-                if (valida.revisaSeleccionado(vista_Candidato.dtgListaCandidatos))
-                {
-                    bool verifica = (abrir != null) ? true : false;
-                    if (verifica)
-                    {
-                        vo_Candidato.picture = vista_Candidato.ptbImagenCandidato;
-                    }
-                    vo_Candidato.Curp = vista_Candidato.txtCurp.Text;
-                    vo_Candidato.IdEleccion = (vista_Candidato.cmbEleccionAsign.SelectedValue != null) ? int.Parse(vista_Candidato.cmbEleccionAsign.SelectedValue.ToString()) : -1;
-                    vo_Candidato.IdPartido = (vista_Candidato.cmbPartidoAsign.SelectedValue != null) ? int.Parse(vista_Candidato.cmbPartidoAsign.SelectedValue.ToString()) : -1;
-                    if (valida.validaModificacion(vo_Candidato.IdEleccion, vo_Candidato.IdPartido,verifica))
-                    {
-                        if (InstanciaCandidatos.Modificar(vo_Candidato))
-                        {
-                            MessageBox.Show("Modificado correctamente....");
-                            llenaGrid();
-                            refrescar();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Intente nuevamente....");
-                        }
-                    }
-                }
-            }
-        }
 
-        //Metodo empleado para la eliminacion de un registro
-        private void Click_Eliminar(object sender, EventArgs e)
-        {
-            if (valida.revisaContenidoGrid(vista_Candidato.dtgListaCandidatos))
-            {
-                if (valida.revisaSeleccionado(vista_Candidato.dtgListaCandidatos))
-                {
-                    vo_Candidato.Curp = vista_Candidato.txtCurp.Text;
-                    
-                    vista_Candidato.ptbImagenCandidato.Image.Dispose();
-                    if (InstanciaCandidatos.Eliminar(vo_Candidato))
-                    {
-                        llenaGrid();
-                        refrescar();
-                        MessageBox.Show("Eliminado correctamente....");                        
-                    }
-                    else
-                    {
-                        MessageBox.Show("Intente nuevamente....");
-                    }
-                }
-            }
-        }
-
+       
         private void Click_Limpiar(object sender, EventArgs e)
         {
             refrescar();
         }
 
-
+        #region Metodos Guardar, Modificar, Eliminar y Listar  
+        //Metodo implementado para el almacenamiento de la informacion en la Bds
         private void Click_Guardar(object sender, EventArgs e)
         {
-            if (vista_Candidato.txtCurp.Text == "" )
+            if (vista_Candidato.txtCurp.Text == "")
             {
                 MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -172,10 +145,69 @@ namespace DigiVot_Controlador
                 }
             }
         }
+        //Metodo implementado para la modifiacion de la informacion en la Bds
+        private void Click_Modificar(object sender, EventArgs e)
+        {
+            if (valida.revisaContenidoGrid(vista_Candidato.dtgListaCandidatos))
+            {
+                if (valida.revisaSeleccionado(vista_Candidato.dtgListaCandidatos))
+                {
+                    bool verifica = (abrir != null) ? true : false;
+                    if (verifica)
+                    {
+                        vo_Candidato.picture = vista_Candidato.ptbImagenCandidato;
+                    }
+                    vo_Candidato.Curp = vista_Candidato.txtCurp.Text;
+                    vo_Candidato.IdEleccion = (vista_Candidato.cmbEleccionAsign.SelectedValue != null) ? int.Parse(vista_Candidato.cmbEleccionAsign.SelectedValue.ToString()) : -1;
+                    vo_Candidato.IdPartido = (vista_Candidato.cmbPartidoAsign.SelectedValue != null) ? int.Parse(vista_Candidato.cmbPartidoAsign.SelectedValue.ToString()) : -1;
+                    if (valida.validaModificacion(vo_Candidato.IdEleccion, vo_Candidato.IdPartido, verifica))
+                    {
+                        if (InstanciaCandidatos.Modificar(vo_Candidato))
+                        {
+                            MessageBox.Show("Modificado correctamente....");
+                            llenaGrid();
+                            refrescar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Intente nuevamente....");
+                        }
+                    }
+                }
+            }
+        }
+
+        //Metodo implementado para eliminacion de la informacion en la Bds
+        private void Click_Eliminar(object sender, EventArgs e)
+        {
+            if (valida.revisaContenidoGrid(vista_Candidato.dtgListaCandidatos))
+            {
+                if (valida.revisaSeleccionado(vista_Candidato.dtgListaCandidatos))
+                {
+                    vo_Candidato.Curp = vista_Candidato.txtCurp.Text;
+
+                    vista_Candidato.ptbImagenCandidato.Image.Dispose();
+                    if (InstanciaCandidatos.Eliminar(vo_Candidato))
+                    {
+                        llenaGrid();
+                        refrescar();
+                        MessageBox.Show("Eliminado correctamente....");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Intente nuevamente....");
+                    }
+                }
+            }
+        }
+
+        #endregion
+
 
         //Metodo que se encarga de buscar si en BDs existe el registro de un ciudadano
         private void Click_Buscar(object sender, EventArgs e)
         {
+            
             if (vista_Candidato.txtCurp.Text == string.Empty)
             {
                 MessageBox.Show("Campos requeridos obligatoriamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -216,23 +248,7 @@ namespace DigiVot_Controlador
             vista_Candidato.cmbPartidoAsign.Items.Add("Elije");
             vista_Candidato.cmbPartidoAsign.SelectedIndex = 0;
         }
-        //Metodo que se encarga del llenado del Grid que muestra los candidatos 
-        public void llenaGrid()
-        {
-            List<object> lstCandidatos = InstanciaCandidatos.Listar(null);
-            if (lstCandidatos.Count != 0)
-            {
-                vista_Candidato.dtgListaCandidatos.DataSource = lstCandidatos;
-                vista_Candidato.dtgListaCandidatos.Columns[5].Visible = false;
-                vista_Candidato.dtgListaCandidatos.Columns[7].Visible = false;
-                vista_Candidato.dtgListaCandidatos.Columns[8].Visible = false;
-                vista_Candidato.dtgListaCandidatos.Columns[9].Visible = false;
-
-            }
-            else {
-                vista_Candidato.dtgListaCandidatos.DataSource ="";
-            }
-        }
+     
 
         //Metodo que permite cargar el combo de partidos (a través de un DataSource)
         private void CargarPartidos()
@@ -266,11 +282,30 @@ namespace DigiVot_Controlador
             
         }
 
+        //Metodo para cargar el datagridview con los datos de la casilla
+        public void llenaGrid()
+        {
+            List<object> lstCandidatos = InstanciaCandidatos.Listar(null);
+            if (lstCandidatos.Count != 0)
+            {
+                vista_Candidato.dtgListaCandidatos.DataSource = lstCandidatos;
+                vista_Candidato.dtgListaCandidatos.Columns[5].Visible = false;
+                vista_Candidato.dtgListaCandidatos.Columns[7].Visible = false;
+                vista_Candidato.dtgListaCandidatos.Columns[8].Visible = false;
+                vista_Candidato.dtgListaCandidatos.Columns[9].Visible = false;
+
+            }
+            else
+            {
+                vista_Candidato.dtgListaCandidatos.DataSource = "";
+            }
+        }
+
         #endregion
 
-        #region Herramientas de la ventana
-        
-        //Metodo que refresca los controles
+        #region Herramientas de los controles de la venta
+
+        //Metodo implementado para limpiar los controles de la ventana
         public void refrescar()
         {
             vista_Candidato.txtCurp.Enabled = true;
@@ -288,6 +323,9 @@ namespace DigiVot_Controlador
             cargaInicial();
             vo_Candidato = new VO_Candidato();
         }
+
+       
+
 
         //Metodo empleado para abrir una imagen 
         private void Click_AgregarImagen(object sender, EventArgs e)
@@ -307,6 +345,32 @@ namespace DigiVot_Controlador
                 MessageBox.Show("Revisar");
             }
         }
+
+        //Metodo que se desencadena tras dar click sobre una fila del datagridview
+        private void Click_Doble(object sender, DataGridViewCellEventArgs e)
+        {
+            checador = true;
+            vista_Candidato.cmbEleccionAsign.DataSource = null;
+            vista_Candidato.cmbPartidoAsign.DataSource = null;
+            vista_Candidato.cmbEleccionAsign.Items.Clear();
+            vista_Candidato.cmbPartidoAsign.Items.Clear();
+            vista_Candidato.cmbEleccionAsign.Items.Insert(0, vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[6].Value.ToString());
+            vista_Candidato.cmbPartidoAsign.Items.Insert(0, vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[4].Value.ToString());
+            vista_Candidato.cmbPartidoAsign.SelectedIndex = 0;
+            vista_Candidato.cmbEleccionAsign.SelectedIndex = 0;
+            vista_Candidato.txtCurp.Enabled = false;
+            vista_Candidato.btnBuscar.Enabled = false;
+            vista_Candidato.btnGuardar.Enabled = false;
+            vista_Candidato.txtCurp.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[0].Value.ToString();
+            vista_Candidato.txtNombre.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[1].Value.ToString();
+            vista_Candidato.txtApellidoP.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[2].Value.ToString();
+            vista_Candidato.txtApellidoM.Text = vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[3].Value.ToString();
+            vista_Candidato.cmbPartidoAsign.SelectedValue = int.Parse(vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[5].Value.ToString());
+            byte[] datos = (byte[])vista_Candidato.dtgListaCandidatos.Rows[vista_Candidato.dtgListaCandidatos.CurrentRow.Index].Cells[8].Value;
+            MemoryStream ms = new MemoryStream(datos);
+            vista_Candidato.ptbImagenCandidato.Image = Bitmap.FromStream(ms);
+        }
+
         #endregion
 
     }

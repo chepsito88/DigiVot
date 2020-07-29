@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpDatosCandidato = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnAgregarImagen = new Guna.UI2.WinForms.Guna2Button();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.cmbCargo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtApellidoM = new Guna.UI2.WinForms.Guna2TextBox();
             this.ptbUsuario = new System.Windows.Forms.PictureBox();
             this.lblApellidoM = new System.Windows.Forms.Label();
@@ -45,27 +47,25 @@
             this.lblCurp = new System.Windows.Forms.Label();
             this.txtCurp = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlUsuario = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.cmbCargo = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblTipo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblCeluar = new System.Windows.Forms.Label();
+            this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.grpListaCandidatos = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dtgListaCandidatos = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dtgUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
             this.grpOperaciones = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
-            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblCeluar = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.grpDatosCandidato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbUsuario)).BeginInit();
             this.grpCandidato.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
             this.grpListaCandidatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgListaCandidatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
             this.grpOperaciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,38 @@
             this.btnAgregarImagen.TabIndex = 22;
             this.btnAgregarImagen.Text = "Agregar Foto";
             this.btnAgregarImagen.UseTransparentBackground = true;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.lblTipo.Location = new System.Drawing.Point(261, 155);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(59, 18);
+            this.lblTipo.TabIndex = 16;
+            this.lblTipo.Text = "Cargo:";
+            // 
+            // cmbCargo
+            // 
+            this.cmbCargo.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCargo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbCargo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbCargo.FocusedState.Parent = this.cmbCargo;
+            this.cmbCargo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbCargo.HoverState.Parent = this.cmbCargo;
+            this.cmbCargo.ItemHeight = 30;
+            this.cmbCargo.ItemsAppearance.Parent = this.cmbCargo;
+            this.cmbCargo.Location = new System.Drawing.Point(220, 188);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.ShadowDecoration.Parent = this.cmbCargo;
+            this.cmbCargo.Size = new System.Drawing.Size(140, 36);
+            this.cmbCargo.TabIndex = 17;
+            this.cmbCargo.Tag = "";
             // 
             // txtApellidoM
             // 
@@ -310,7 +342,7 @@
             this.pnlUsuario.BorderRadius = 5;
             this.pnlUsuario.BorderThickness = 2;
             this.pnlUsuario.Controls.Add(this.label2);
-            this.pnlUsuario.Controls.Add(this.guna2TextBox2);
+            this.pnlUsuario.Controls.Add(this.txtEmail);
             this.pnlUsuario.Controls.Add(this.lblCeluar);
             this.pnlUsuario.Controls.Add(this.txtTelefono);
             this.pnlUsuario.Controls.Add(this.lblUsuario);
@@ -327,37 +359,110 @@
             this.pnlUsuario.Text = "Datos de Usuario";
             this.pnlUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cmbCargo
+            // label2
             // 
-            this.cmbCargo.BackColor = System.Drawing.Color.Transparent;
-            this.cmbCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCargo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCargo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCargo.FocusedState.Parent = this.cmbCargo;
-            this.cmbCargo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbCargo.HoverState.Parent = this.cmbCargo;
-            this.cmbCargo.ItemHeight = 30;
-            this.cmbCargo.ItemsAppearance.Parent = this.cmbCargo;
-            this.cmbCargo.Location = new System.Drawing.Point(220, 188);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.ShadowDecoration.Parent = this.cmbCargo;
-            this.cmbCargo.Size = new System.Drawing.Size(140, 36);
-            this.cmbCargo.TabIndex = 17;
-            this.cmbCargo.Tag = "";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(136, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Email:";
             // 
-            // lblTipo
+            // txtEmail
             // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblTipo.Location = new System.Drawing.Point(261, 155);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(59, 18);
-            this.lblTipo.TabIndex = 16;
-            this.lblTipo.Text = "Cargo:";
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.Parent = this.txtEmail;
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.FocusedState.Parent = this.txtEmail;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.HoverState.Parent = this.txtEmail;
+            this.txtEmail.Location = new System.Drawing.Point(92, 195);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(21, 19, 21, 19);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
+            this.txtEmail.Size = new System.Drawing.Size(140, 31);
+            this.txtEmail.TabIndex = 3;
+            // 
+            // lblCeluar
+            // 
+            this.lblCeluar.AutoSize = true;
+            this.lblCeluar.BackColor = System.Drawing.Color.Transparent;
+            this.lblCeluar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.lblCeluar.Location = new System.Drawing.Point(129, 112);
+            this.lblCeluar.Name = "lblCeluar";
+            this.lblCeluar.Size = new System.Drawing.Size(66, 18);
+            this.lblCeluar.TabIndex = 4;
+            this.lblCeluar.Text = "Celular:";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefono.DefaultText = "";
+            this.txtTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefono.DisabledState.Parent = this.txtTelefono;
+            this.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefono.FocusedState.Parent = this.txtTelefono;
+            this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelefono.HoverState.Parent = this.txtTelefono;
+            this.txtTelefono.Location = new System.Drawing.Point(92, 132);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.PasswordChar = '\0';
+            this.txtTelefono.PlaceholderText = "Celular";
+            this.txtTelefono.SelectedText = "";
+            this.txtTelefono.ShadowDecoration.Parent = this.txtTelefono;
+            this.txtTelefono.Size = new System.Drawing.Size(140, 31);
+            this.txtTelefono.TabIndex = 3;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.lblUsuario.Location = new System.Drawing.Point(129, 52);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(66, 18);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.Parent = this.txtUser;
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.FocusedState.Parent = this.txtUser;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.HoverState.Parent = this.txtUser;
+            this.txtUser.Location = new System.Drawing.Point(92, 72);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(9);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PasswordChar = '\0';
+            this.txtUser.PlaceholderText = "Usuario";
+            this.txtUser.SelectedText = "";
+            this.txtUser.ShadowDecoration.Parent = this.txtUser;
+            this.txtUser.Size = new System.Drawing.Size(140, 31);
+            this.txtUser.TabIndex = 3;
             // 
             // grpListaCandidatos
             // 
@@ -365,7 +470,7 @@
             this.grpListaCandidatos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpListaCandidatos.BorderRadius = 5;
             this.grpListaCandidatos.BorderThickness = 2;
-            this.grpListaCandidatos.Controls.Add(this.dtgListaCandidatos);
+            this.grpListaCandidatos.Controls.Add(this.dtgUsuarios);
             this.grpListaCandidatos.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
             this.grpListaCandidatos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.grpListaCandidatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -378,63 +483,64 @@
             this.grpListaCandidatos.Text = "Listado de Candidatos";
             this.grpListaCandidatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dtgListaCandidatos
+            // dtgUsuarios
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgListaCandidatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgListaCandidatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.dtgListaCandidatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dtgListaCandidatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dtgListaCandidatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgListaCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgListaCandidatos.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgListaCandidatos.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgListaCandidatos.EnableHeadersVisualStyles = false;
-            this.dtgListaCandidatos.GridColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.Location = new System.Drawing.Point(143, 66);
-            this.dtgListaCandidatos.MultiSelect = false;
-            this.dtgListaCandidatos.Name = "dtgListaCandidatos";
-            this.dtgListaCandidatos.RowHeadersVisible = false;
-            this.dtgListaCandidatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgListaCandidatos.Size = new System.Drawing.Size(575, 232);
-            this.dtgListaCandidatos.TabIndex = 12;
-            this.dtgListaCandidatos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgListaCandidatos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgListaCandidatos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgListaCandidatos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgListaCandidatos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgListaCandidatos.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.dtgListaCandidatos.ThemeStyle.GridColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.dtgListaCandidatos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgListaCandidatos.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgListaCandidatos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgListaCandidatos.ThemeStyle.HeaderStyle.Height = 30;
-            this.dtgListaCandidatos.ThemeStyle.ReadOnly = false;
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgListaCandidatos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.dtgUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dtgUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgUsuarios.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgUsuarios.EnableHeadersVisualStyles = false;
+            this.dtgUsuarios.GridColor = System.Drawing.Color.White;
+            this.dtgUsuarios.Location = new System.Drawing.Point(24, 68);
+            this.dtgUsuarios.MultiSelect = false;
+            this.dtgUsuarios.Name = "dtgUsuarios";
+            this.dtgUsuarios.ReadOnly = true;
+            this.dtgUsuarios.RowHeadersVisible = false;
+            this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgUsuarios.Size = new System.Drawing.Size(804, 232);
+            this.dtgUsuarios.TabIndex = 12;
+            this.dtgUsuarios.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgUsuarios.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgUsuarios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgUsuarios.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.dtgUsuarios.ThemeStyle.GridColor = System.Drawing.Color.White;
+            this.dtgUsuarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
+            this.dtgUsuarios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgUsuarios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgUsuarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgUsuarios.ThemeStyle.HeaderStyle.Height = 30;
+            this.dtgUsuarios.ThemeStyle.ReadOnly = true;
+            this.dtgUsuarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            this.dtgUsuarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dtgUsuarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgUsuarios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgUsuarios.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // grpOperaciones
             // 
@@ -525,115 +631,6 @@
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
             // 
-            // txtUser
-            // 
-            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.DefaultText = "";
-            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.DisabledState.Parent = this.txtUser;
-            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.Enabled = false;
-            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.FocusedState.Parent = this.txtUser;
-            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.HoverState.Parent = this.txtUser;
-            this.txtUser.Location = new System.Drawing.Point(92, 72);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.PasswordChar = '\0';
-            this.txtUser.PlaceholderText = "Usuario";
-            this.txtUser.SelectedText = "";
-            this.txtUser.ShadowDecoration.Parent = this.txtUser;
-            this.txtUser.Size = new System.Drawing.Size(140, 31);
-            this.txtUser.TabIndex = 3;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblUsuario.Location = new System.Drawing.Point(129, 52);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(66, 18);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefono.DefaultText = "";
-            this.txtTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefono.DisabledState.Parent = this.txtTelefono;
-            this.txtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefono.Enabled = false;
-            this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefono.FocusedState.Parent = this.txtTelefono;
-            this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefono.HoverState.Parent = this.txtTelefono;
-            this.txtTelefono.Location = new System.Drawing.Point(92, 132);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.txtTelefono.MaxLength = 10;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PasswordChar = '\0';
-            this.txtTelefono.PlaceholderText = "Celular";
-            this.txtTelefono.SelectedText = "";
-            this.txtTelefono.ShadowDecoration.Parent = this.txtTelefono;
-            this.txtTelefono.Size = new System.Drawing.Size(140, 31);
-            this.txtTelefono.TabIndex = 3;
-            // 
-            // lblCeluar
-            // 
-            this.lblCeluar.AutoSize = true;
-            this.lblCeluar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCeluar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.lblCeluar.Location = new System.Drawing.Point(129, 112);
-            this.lblCeluar.Name = "lblCeluar";
-            this.lblCeluar.Size = new System.Drawing.Size(66, 18);
-            this.lblCeluar.TabIndex = 4;
-            this.lblCeluar.Text = "Celular:";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.Enabled = false;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(92, 195);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(21, 19, 21, 19);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Nombre";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(140, 31);
-            this.guna2TextBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(89)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(136, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Email:";
-            // 
             // Vista_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,7 +652,7 @@
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
             this.grpListaCandidatos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgListaCandidatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();
             this.grpOperaciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -680,7 +677,7 @@
         public Guna.UI2.WinForms.Guna2ComboBox cmbCargo;
         public System.Windows.Forms.Label lblTipo;
         public Guna.UI2.WinForms.Guna2GroupBox grpListaCandidatos;
-        public Guna.UI2.WinForms.Guna2DataGridView dtgListaCandidatos;
+        public Guna.UI2.WinForms.Guna2DataGridView dtgUsuarios;
         public Guna.UI2.WinForms.Guna2GroupBox grpOperaciones;
         public Guna.UI2.WinForms.Guna2Button btnLimpiar;
         public Guna.UI2.WinForms.Guna2Button btnEliminar;
@@ -689,7 +686,7 @@
         public System.Windows.Forms.Label lblUsuario;
         public Guna.UI2.WinForms.Guna2TextBox txtUser;
         public System.Windows.Forms.Label label2;
-        public Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
         public System.Windows.Forms.Label lblCeluar;
         public Guna.UI2.WinForms.Guna2TextBox txtTelefono;
     }

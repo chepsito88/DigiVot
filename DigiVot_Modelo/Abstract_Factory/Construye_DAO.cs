@@ -14,7 +14,7 @@ namespace DigiVot_Modelo
                 case 1:return new DAO_Perfiles();
                 case 2:return new DAO_Reglas();
                 case 3:return new DAO_PerfilReglas();
-                case 4: return new DAO_Login();
+                case 4: return new Adapter_DAO_Usuario();
                 case 5: return new Adapter_DAO_Candidato();
                 case 6: return new DAO_Partidos();
                 case 7: return new DAO_Ciudadano();
@@ -23,6 +23,7 @@ namespace DigiVot_Modelo
                 case 10: return new DAO_Mesa();
                 case 11: return new DAO_Localidades();
                 case 12: return new DAO_Casilla();
+                case 13: return new DAO_Reportes();
                 default: return null;
             }
         }
