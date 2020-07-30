@@ -73,7 +73,17 @@ namespace DigiVot_Controlador
             vPrincipal.btnMesaDirectiva.Click += Click_Mesa;
             vPrincipal.btnUsuarios.Click += Click_Usuarios;
             vPrincipal.btnReporteNacional.Click += Click_Nacional;
+            vPrincipal.btnMiPerfil.Click += Click_Cerrar;
 
+        }
+
+        private void Click_Cerrar(object sender, EventArgs e)
+        {
+            Vista_Login vLogin = new Vista_Login();
+            Controlador_Login conLogin = new Controlador_Login(vLogin);
+            vLogin.StartPosition = FormStartPosition.CenterScreen;
+            vLogin.Show();
+            vPrincipal.Close();
         }
 
         private void Click_Nacional(object sender, EventArgs e)

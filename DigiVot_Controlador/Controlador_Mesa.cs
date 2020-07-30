@@ -241,6 +241,7 @@ namespace DigiVot_Controlador
                 {                    
                     MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     vista_Mesa.txtLocalidad.Clear();
+                    checador = false;
                 }
             }
         }

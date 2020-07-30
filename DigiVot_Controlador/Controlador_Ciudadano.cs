@@ -180,6 +180,7 @@ namespace DigiVot_Controlador
             vista_Ciudadano.txtApellido.Clear();
             vista_Ciudadano.txtApellidoM.Clear();
             vista_Ciudadano.txtCurp.Clear();
+            vista_Ciudadano.txtEdad.Clear();
             vista_Ciudadano.cmbSexo.SelectedIndex = 0;
             vista_Ciudadano.txtFolioINE.Clear();
             vista_Ciudadano.txtVigencia.Clear();
@@ -248,8 +249,6 @@ namespace DigiVot_Controlador
                 else
                 {
                     MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    vista_Ciudadano.txtclave.Clear();
-                    checador = false;
                     reiniciaDireccion();
                 }
             }

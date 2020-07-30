@@ -212,7 +212,7 @@
             this.btnMiPerfil.ShadowDecoration.Parent = this.btnMiPerfil;
             this.btnMiPerfil.Size = new System.Drawing.Size(168, 35);
             this.btnMiPerfil.TabIndex = 8;
-            this.btnMiPerfil.Text = "  Mi perfil";
+            this.btnMiPerfil.Text = "Cerra Sesion";
             this.btnMiPerfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // pnlAltas
