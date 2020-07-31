@@ -214,36 +214,43 @@ namespace DigiVot_Controlador
                if (!checador)
                {
                    Buscar();
+                   return;
                }
-               checador = false;
+               checador = true;
 
            }));
         }
 
         private void Buscar()
         {
-            vo_Localidad = new VO_Localidad();
-            if (vista_Mesa.txtLocalidad.Text == "")
+            if (!checador)
             {
-                MessageBox.Show("Ingrese localidad", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                vo_Localidad.idLocalidad = int.Parse(vista_Mesa.txtLocalidad.Text);
-                List<object> lstlocalidad = InstanciaLocalidad.Listar(vo_Localidad);
-                if ((Boolean)lstlocalidad[0])
+                vo_Localidad = new VO_Localidad();
+                if (vista_Mesa.txtLocalidad.Text == "")
                 {
-                    vo_Localidad = (VO_Localidad)lstlocalidad[1];
-                    vista_Mesa.txtMunicipio.Text = vo_Localidad.Municpio;
-                    vista_Mesa.txtEstado.Text = vo_Localidad.Estado;
+                    MessageBox.Show("Ingrese localidad", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
-                {                    
-                    MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    vista_Mesa.txtLocalidad.Clear();
-                    checador = false;
+                {
+                    vo_Localidad.idLocalidad = int.Parse(vista_Mesa.txtLocalidad.Text);
+                    List<object> lstlocalidad = InstanciaLocalidad.Listar(vo_Localidad);
+                    if ((Boolean)lstlocalidad[0])
+                    {
+                        vo_Localidad = (VO_Localidad)lstlocalidad[1];
+                        vista_Mesa.txtMunicipio.Text = vo_Localidad.Municpio;
+                        vista_Mesa.txtEstado.Text = vo_Localidad.Estado;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Localidad no localizada", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        vista_Mesa.txtLocalidad.Clear();
+                        checador = false;
+                    }
                 }
             }
+
+            checador = false;
+           
         }
     }
 }

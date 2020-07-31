@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract_Factory\Construye_DAO.cs" />
-    <Compile Include="DAO\Adapter_DAO_Candidato.cs" />
+    <Compile Include="DAO\DAO_Candidato.cs" />
     <Compile Include="DAO\DAO_Reglas.cs" />
     <Compile Include="DAO\DAO_Perfiles.cs" />
     <Compile Include="Abstract_Factory\ICrud.cs" />
@@ -53,7 +53,6 @@
     <Compile Include="DAO\DAO_Ciudadano.cs" />
     <Compile Include="DAO\DAO_Elecciones.cs" />
     <Compile Include="DAO\DAO_Partidos.cs" />
-    <Compile Include="DAO\DAO_Candidato.cs" />
     <Compile Include="DAO\DAO_Funcionario.cs" />
     <Compile Include="DAO\DAO_Mesa.cs" />
     <Compile Include="DAO\DAO_Localidades.cs" />
